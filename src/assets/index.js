@@ -1,0 +1,11 @@
+import logo from './logo.svg'
+import loginBtn from './login-btn.svg'
+import homeImg from './home-girl.svg'
+import heroImgRect from './hero-img-rect.png'
+import mobileHeroImg from './mobile-hero-girl.png'
+import avatar1 from './avatar1.png'
+import avatar2 from './avatar2.png'
+import avatar3 from './avatar3.png'
+import avatar4 from './avatar4.png'
+import networkDesign from './network-design.png'
+export { logo, loginBtn, homeImg, mobileHeroImg, heroImgRect, avatar1, avatar2, avatar3, avatar4, networkDesign };
