@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Navbar(props) {
     const [navOpen, setNavOpen] = useState(false);
     return (
-        <nav className="max-w-[1512px] bg-dark-cyan p-[10px_16px] sm:p-[10px_32px] xl:p-[15px_96px] mx-auto 2xl:p-[15px_156px] flex justify-between items-center">
+        <nav className="max-w-[1512px] bg-dark-cyan p-[10px_16px] h-[78px] sm:p-[10px_32px] xl:p-[15px_96px] mx-auto 2xl:p-[15px_156px] flex justify-between items-center">
 
             <div className="logo flex justify-center items-center gap-[22px]">
                 <div className="xlg:hidden" onClick={() => setNavOpen(true)}>

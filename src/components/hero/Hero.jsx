@@ -4,7 +4,7 @@ import { avatar1, avatar2, avatar3, avatar4, heroImgRect, homeImg, mobileHeroImg
 function Hero(props) {
     return (
         <>
-            <div className="hero max-w-[1512px] min-h-[1123px] pt-0 relative mx-auto bg-dark-cyan xl:p-[15px_96px] 2xl:p-[15px_156px] overflow-hidden">
+            <div className="hero max-w-[1512px] min-h-[1123px] pt-0 relative mx-auto bg-dark-cyan xl:p-[15px_96px] 2xl:p-[0_156px] overflow-hidden">
                 <div className="hero-img xlg:absolute relative right-0 top-0 z-[4]">
                     <img className="xlg:block hidden 2xl:w-[calc(855px_-_0px)] lg:w-[calc(100vw_-_400px)] xl:w-[calc(100vw_-_600px)] " src={homeImg} alt="Home Girl Image" />
                     <img className="xlg:hidden block" src={mobileHeroImg} alt="Home Girl Image" />
