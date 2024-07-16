@@ -16,11 +16,12 @@ export default {
       fontFamily: {
         lato: "Lato , sans-serif",
         inter: "Inter , sans-serif",
-        popins: "Poppins , sans-serif"
+        popins: "Poppins , sans-serif",
+        manrope: "Manrope , sans-serif"
       },
       screens: {
         xss: {
-          max: "375px",
+          max: "374px",
         },
         xlg: {
           min: '844px',
