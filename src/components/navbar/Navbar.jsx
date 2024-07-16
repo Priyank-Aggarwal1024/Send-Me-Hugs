@@ -51,7 +51,7 @@ function Navbar(props) {
                     <Link to="/" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200">About Us</Link>
                 </div>
             </div>
-            <div className="nav-bittons flex justify-center items-center gap-[20px]">
+            <div className="nav-buttons flex justify-center items-center gap-[20px]">
                 <button className=" bg-gradient-cyan text-white p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] rounded-[36px]"><span>Start</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M7.9998 10.4001C7.86368 10.3994 7.72941 10.3684 7.60674 10.3094C7.48407 10.2503 7.37608 10.1647 7.29061 10.0588L5.04571 7.33876C4.91454 7.17501 4.83199 6.9777 4.80748 6.76931C4.78296 6.56092 4.81747 6.34983 4.90707 6.1601C4.97974 5.99521 5.09833 5.85472 5.24867 5.75542C5.39901 5.65611 5.57475 5.6022 5.75491 5.6001H10.2447C10.4249 5.6022 10.6006 5.65611 10.7509 5.75542C10.9013 5.85472 11.0199 5.99521 11.0925 6.1601C11.1821 6.34983 11.2166 6.56092 11.1921 6.76931C11.1676 6.9777 11.0851 7.17501 10.9539 7.33876L8.709 10.0588C8.62352 10.1647 8.51554 10.2503 8.39287 10.3094C8.2702 10.3684 8.13593 10.3994 7.9998 10.4001Z" fill="white" />
