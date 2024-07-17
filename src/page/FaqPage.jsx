@@ -6,9 +6,14 @@ function FaqPage(props) {
 
     return (
         <>
-            <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"}`}>
+            <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan overflow-hidden ${navOpen && "fixed"}`}>
+
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
-                <div className="max-w-[1512px] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-6">
+                <div className="faq-background-circle-design">
+
+                </div>
+                <div className="background-circle-design1 faq-design1"></div>
+                <div className="max-w-[1512px] relative z-[2] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-6">
                     <div className=" max-w-[895px] ">
                         <h2 className="font-lato font-[700] pb-[28px] text-[32px] leading-[40px] md:text-start -tracking-[.64px]">Frequently asked Questions</h2>
                         <Faq />

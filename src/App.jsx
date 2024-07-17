@@ -7,17 +7,19 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/signup' element={<Signin />} />
-          <Route path='/forgot-password' element={<ForgotPassword />} />
-          <Route path='/faq' element={<FaqPage />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/help' element={<Help />} />
-        </Routes>
-      </BrowserRouter>
+      <div className="app overflow-hidden">
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/signup' element={<Signin />} />
+            <Route path='/forgot-password' element={<ForgotPassword />} />
+            <Route path='/faq' element={<FaqPage />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/help' element={<Help />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   )
 }

@@ -65,6 +65,7 @@ function Home(props) {
     return (
         <>
             <div className={`home w-[100%] bg-dark-cyan ${navOpen && "fixed"}`}>
+
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <Hero />
                 <div className="max-w-[1512px] mx-auto pt-[18px] sm:pt-[75px] 2xl:px-[156px] lg:px-[33px] xl:px-[96px] px-[16px]">
@@ -134,14 +135,16 @@ function Home(props) {
 
                     </div>
                 </div>
-                <div className="max-w-[1512px] mx-auto mt-[66px] 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] flex flex-col gap-[36px] text-white">
+                <div className="max-w-[1512px] mx-auto mt-[66px] 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] flex flex-col gap-[36px] text-white relative">
+                    <div className="background-circle-design1 design4"></div>
+
                     <div className="flex flex-col gap-[20px]">
                         <h2 className="font-inter font-[700] text-[32px] leading-[48px] -tracking-[.8px] text-center">Send me hugs?</h2>
                         <p className="font-inter font-[400] text-[16px] leading-[24px] text-center self max-w-[650px] mx-auto">GoFundMe is the trusted place to fundraise for what you care about. There is no
                             pressure to reach your fundraising goal and we have created tools to make it easy
                             for donors to contribute to your fundraiser.</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[20px]">
+                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[20px] relative z-[2]">
                         {
                             smh.map((item, idx) => <Card2 item={item} key={idx} />)
                         }

@@ -33,9 +33,13 @@ function Help(props) {
         },
     ]
     return (
-        <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"}`}>
+        <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"} relative overflow-hidden`}>
+            <div className="faq-background-circle-design">
+
+            </div>
+            <div className="background-circle-design1 faq-design1"></div>
             <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
-            <div className="max-w-[1512px] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-3">
+            <div className="max-w-[1512px] relative z-[2] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-3">
                 <Link className="flex items-center p-[6px_8px] gap-1 w-fit" to="/">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M12.8002 7.99981L3.2002 7.9998M3.2002 7.9998L6.59431 11.1998M3.2002 7.9998L6.59431 4.7998" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
