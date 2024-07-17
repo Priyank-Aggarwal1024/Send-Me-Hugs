@@ -137,7 +137,6 @@ function Home(props) {
                 </div>
                 <div className="max-w-[1512px] mx-auto mt-[66px] 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] flex flex-col gap-[36px] text-white relative">
                     <div className="background-circle-design1 design4"></div>
-
                     <div className="flex flex-col gap-[20px]">
                         <h2 className="font-inter font-[700] text-[32px] leading-[48px] -tracking-[.8px] text-center">Send me hugs?</h2>
                         <p className="font-inter font-[400] text-[16px] leading-[24px] text-center self max-w-[650px] mx-auto">GoFundMe is the trusted place to fundraise for what you care about. There is no
