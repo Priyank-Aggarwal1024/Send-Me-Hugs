@@ -1,11 +1,25 @@
 import React, { useState } from 'react';
-import { loginBtn, logo } from '../../assets';
-import { Link, NavLink } from 'react-router-dom';
+import { loginBtn, logo, navArrow } from '../../assets';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 
 function Navbar({ navOpen, setNavOpen }) {
     const linkStyle = ({ isActive }) => {
         return {
             color: isActive ? "rgba(29, 210, 180, 1)" : "white",
+        }
+    }
+    const navigate = useNavigate()
+    const [subnav, setSubnav] = useState("")
+    const handleSubnav = (val) => {
+        if (subnav == "") {
+            setSubnav(val)
+        } else {
+            if (subnav != val) {
+                setSubnav(val);
+            }
+            else {
+                setSubnav("")
+            }
         }
     }
     return (
@@ -23,18 +37,33 @@ function Navbar({ navOpen, setNavOpen }) {
             </div>
             <div className="hidden xlg:flex links items-center gap-[25px] lg:gap-[15px] text-white font-popins">
                 <NavLink to="/" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle}>Home</NavLink>
-                <NavLink to="/charities" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle}><span>For Charities</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M7.23807 11.1998C7.07061 11.1988 6.90524 11.1625 6.7528 11.0931C6.58793 11.0205 6.44746 10.9019 6.34817 10.7515C6.24888 10.6012 6.19497 10.4254 6.19287 10.2452L6.19287 5.755C6.19497 5.57483 6.24888 5.39907 6.34817 5.24871C6.44746 5.09836 6.58793 4.97976 6.7528 4.90708C6.9425 4.81747 7.15356 4.78296 7.36193 4.80748C7.57029 4.83199 7.76758 4.91455 7.93131 5.04574L10.651 7.29085C10.7576 7.37576 10.8437 7.48362 10.9029 7.60642C10.9621 7.72922 10.9929 7.86379 10.9929 8.00011C10.9929 8.13644 10.9621 8.27101 10.9029 8.39381C10.8437 8.5166 10.7576 8.62447 10.651 8.70938L7.93131 10.9545C7.73527 11.1135 7.49047 11.2001 7.23807 11.1998Z" fill="white" />
-                    </svg></NavLink>
-                <NavLink to="/individuals" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle}><span>For Individuals</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                        <path d="M7.23807 11.1998C7.07061 11.1988 6.90524 11.1625 6.7528 11.0931C6.58793 11.0205 6.44746 10.9019 6.34817 10.7515C6.24888 10.6012 6.19497 10.4254 6.19287 10.2452L6.19287 5.755C6.19497 5.57483 6.24888 5.39907 6.34817 5.24871C6.44746 5.09836 6.58793 4.97976 6.7528 4.90708C6.9425 4.81747 7.15356 4.78296 7.36193 4.80748C7.57029 4.83199 7.76758 4.91455 7.93131 5.04574L10.651 7.29085C10.7576 7.37576 10.8437 7.48362 10.9029 7.60642C10.9621 7.72922 10.9929 7.86379 10.9929 8.00011C10.9929 8.13644 10.9621 8.27101 10.9029 8.39381C10.8437 8.5166 10.7576 8.62447 10.651 8.70938L7.93131 10.9545C7.73527 11.1135 7.49047 11.2001 7.23807 11.1998Z" fill="white" />
-                    </svg></NavLink>
+                <div className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px]  duration-200 relative" onClick={() => handleSubnav("charity")}>
+                    <span>For Charities</span>
+                    <img src={navArrow} alt="Nav Arrow" />
+                    {
+                        subnav == "charity" && <div className="flex flex-col gap-1 items-center p-1 z-[12] bg-[#232323] absolute top-[35px]  h-fit w-[203px] left-0 -translate-x-[20%]">
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Fundraisers</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Success Stories</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Social Impact Funds</NavLink>
+                        </div>
+                    }
+
+                </div>
+                <div className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px]  duration-200 relative" onClick={() => handleSubnav("individual")}>
+                    <span>For Individuals</span>
+                    <img src={navArrow} alt="Nav Arrow" />
+                    {
+                        subnav == "individual" && <div className="flex flex-col gap-1 items-center p-1 z-[12] bg-[#232323] absolute top-[35px]  h-fit w-[203px] left-0 -translate-x-[20%]">
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Fundraisers</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Success Stories</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Social Impact Funds</NavLink>
+                        </div>
+                    }
+                </div>
                 <NavLink to="/faq" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle}>FAQ</NavLink>
                 <NavLink to="/about" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle}>About Us</NavLink>
             </div>
-            <div className={`mobile-nav pt-[15px] gap-[72px] min-h-[100vh] absolute z-[100] ${navOpen ? "left-[0px] duration-200" : "-left-[375px] "} top-0 min-w-[375px] xss:w-[100%] xss:min-w-[unset] bg-black flex items-center text-white flex-col xlg:hidden`}>
+            <div className={`mobile-nav pt-[15px] gap-[72px] min-h-[100vh] overflow-auto absolute z-[100] ${navOpen ? "left-[0px] duration-200" : "-left-[375px] "} top-0 min-w-[375px] xss:w-[100%] xss:min-w-[unset] bg-black flex items-center text-white flex-col xlg:hidden`}>
                 <svg className="ml-auto mr-[19px]" onClick={() => setNavOpen(false)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M17 7L7 17M17 17L7 7" stroke="#626B7F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -43,20 +72,35 @@ function Navbar({ navOpen, setNavOpen }) {
                 </div>
                 <div className="links flex flex-col gap-[24px] font-popins">
                     <NavLink to="/" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle} onClick={() => setNavOpen(false)} >Home</NavLink>
-                    <NavLink to="/charities" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle} onClick={() => setNavOpen(false)} ><span>For Charities</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                            <path d="M7.23807 11.1998C7.07061 11.1988 6.90524 11.1625 6.7528 11.0931C6.58793 11.0205 6.44746 10.9019 6.34817 10.7515C6.24888 10.6012 6.19497 10.4254 6.19287 10.2452L6.19287 5.755C6.19497 5.57483 6.24888 5.39907 6.34817 5.24871C6.44746 5.09836 6.58793 4.97976 6.7528 4.90708C6.9425 4.81747 7.15356 4.78296 7.36193 4.80748C7.57029 4.83199 7.76758 4.91455 7.93131 5.04574L10.651 7.29085C10.7576 7.37576 10.8437 7.48362 10.9029 7.60642C10.9621 7.72922 10.9929 7.86379 10.9929 8.00011C10.9929 8.13644 10.9621 8.27101 10.9029 8.39381C10.8437 8.5166 10.7576 8.62447 10.651 8.70938L7.93131 10.9545C7.73527 11.1135 7.49047 11.2001 7.23807 11.1998Z" fill="white" />
-                        </svg></NavLink>
-                    <NavLink to="/individuals" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle} onClick={() => setNavOpen(false)} ><span>For Individuals</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
-                            <path d="M7.23807 11.1998C7.07061 11.1988 6.90524 11.1625 6.7528 11.0931C6.58793 11.0205 6.44746 10.9019 6.34817 10.7515C6.24888 10.6012 6.19497 10.4254 6.19287 10.2452L6.19287 5.755C6.19497 5.57483 6.24888 5.39907 6.34817 5.24871C6.44746 5.09836 6.58793 4.97976 6.7528 4.90708C6.9425 4.81747 7.15356 4.78296 7.36193 4.80748C7.57029 4.83199 7.76758 4.91455 7.93131 5.04574L10.651 7.29085C10.7576 7.37576 10.8437 7.48362 10.9029 7.60642C10.9621 7.72922 10.9929 7.86379 10.9929 8.00011C10.9929 8.13644 10.9621 8.27101 10.9029 8.39381C10.8437 8.5166 10.7576 8.62447 10.651 8.70938L7.93131 10.9545C7.73527 11.1135 7.49047 11.2001 7.23807 11.1998Z" fill="white" />
-                        </svg></NavLink>
+                    <div className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200 relative" onClick={() => handleSubnav("charity")} >
+                        <span>For Charities</span>
+                        <img src={navArrow} alt="Nav Arrow" />
+                    </div>
+                    {
+                        subnav == "charity" && <div className="flex flex-col gap-1 items-center p-1 z-[12] bg-[#232323]   h-fit w-[203px]">
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Fundraisers</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Success Stories</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Social Impact Funds</NavLink>
+                        </div>
+                    }
+                    <div className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" onClick={() => handleSubnav("individual")} >
+                        <span>For Individuals</span>
+                        <img src={navArrow} alt="Nav Arrow" />
+
+                    </div>
+                    {
+                        subnav == "individual" && <div className="flex flex-col gap-1 items-center p-1 z-[12] bg-[#232323] h-fit w-[203px]">
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Fundraisers</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Success Stories</NavLink>
+                            <NavLink to="" className="p-2 pointer-events-none" style={linkStyle}>Social Impact Funds</NavLink>
+                        </div>
+                    }
                     <NavLink to="/faq" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle} onClick={() => setNavOpen(false)} >FAQ</NavLink>
                     <NavLink to="/about" className="p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] hover:text-primary-500 duration-200" style={linkStyle} onClick={() => setNavOpen(false)} >About Us</NavLink>
                 </div>
             </div>
             <div className="nav-buttons flex justify-center items-center gap-[20px] xss:gap-2.5">
-                <button className=" bg-gradient-cyan text-white p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] rounded-[36px]"><span>Start</span>
+                <button className=" bg-gradient-cyan text-white p-[6px_8px] flex justify-center items-center gap-[4px] text-[14px] rounded-[36px]" onClick={() => navigate("/help")}><span>Start</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path d="M7.9998 10.4001C7.86368 10.3994 7.72941 10.3684 7.60674 10.3094C7.48407 10.2503 7.37608 10.1647 7.29061 10.0588L5.04571 7.33876C4.91454 7.17501 4.83199 6.9777 4.80748 6.76931C4.78296 6.56092 4.81747 6.34983 4.90707 6.1601C4.97974 5.99521 5.09833 5.85472 5.24867 5.75542C5.39901 5.65611 5.57475 5.6022 5.75491 5.6001H10.2447C10.4249 5.6022 10.6006 5.65611 10.7509 5.75542C10.9013 5.85472 11.0199 5.99521 11.0925 6.1601C11.1821 6.34983 11.2166 6.56092 11.1921 6.76931C11.1676 6.9777 11.0851 7.17501 10.9539 7.33876L8.709 10.0588C8.62352 10.1647 8.51554 10.2503 8.39287 10.3094C8.2702 10.3684 8.13593 10.3994 7.9998 10.4001Z" fill="white" />
                     </svg></button>

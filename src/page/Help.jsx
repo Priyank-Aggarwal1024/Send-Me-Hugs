@@ -33,7 +33,7 @@ function Help(props) {
         },
     ]
     return (
-        <div className="w-[100%] bg-dark-cyan ">
+        <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"}`}>
             <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
             <div className="max-w-[1512px] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-3">
                 <Link className="flex items-center p-[6px_8px] gap-1 w-fit" to="/">

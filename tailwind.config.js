@@ -17,7 +17,8 @@ export default {
         lato: "Lato , sans-serif",
         inter: "Inter , sans-serif",
         popins: "Poppins , sans-serif",
-        manrope: "Manrope , sans-serif"
+        manrope: "Manrope , sans-serif",
+        ibm: "IBM Plex Sans , sans-serif",
       },
       screens: {
         xss: {

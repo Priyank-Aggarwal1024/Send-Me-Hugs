@@ -6,7 +6,7 @@ function FaqPage(props) {
 
     return (
         <>
-            <div className="w-[100%] bg-dark-cyan ">
+            <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"}`}>
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <div className="max-w-[1512px] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-6">
                     <div className=" max-w-[895px] ">
