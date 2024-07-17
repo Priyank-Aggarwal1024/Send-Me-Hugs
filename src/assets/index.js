@@ -49,16 +49,21 @@ import privacy from './privacy.svg'
 import aLogo from './about-logo.svg'
 import aImg from './about-img.png'
 import graph from './graph.svg'
+import graph2 from './graph2.png'
 import pay1 from './pay1.svg'
 import pay2 from './pay2.svg'
 import pay3 from './pay3.svg'
 import pay4 from './pay4.svg'
 import pay5 from './pay5.svg'
 import pay6 from './pay6.svg'
+import hav1 from './hav1.png'
+import hav2 from './hav2.png'
+import hav3 from './hav3.png'
+import hav4 from './hav4.png'
 import helpImg from './helpImg.png'
 export {
     logo, loginBtn, homeImg, mobileHeroImg, heroImgRect, avatar1, avatar2, avatar3, avatar4, networkDesign, picon, sicon, web3icon, si1, si2, si3, support, larrow, rarrow, logo2, of1, of2, of3, ngo1, ngo2, ngo3, facebook, instagram, twitter, uarrow, darrow,
     smh1, smh2, smh3, smh4, smh5,
     smh6, smh7, smh8, smh9, child, money, mmoney, mchild, telegram, youtube, discord, privacy, aLogo, aImg, graph, pay1
-    , pay2, pay3, pay4, pay5, pay6, helpImg
+    , pay2, pay3, pay4, pay5, pay6, helpImg, graph2, hav1, hav2, hav3, hav4
 };
