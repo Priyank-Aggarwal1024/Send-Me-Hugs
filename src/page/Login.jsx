@@ -8,7 +8,7 @@ function Login(props) {
             <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 md:h-[100vh] min-h-[100vh] items-center">
                 <div className="flex justify-center items-center">
                     <div className="sm:max-w-[450px] xl:min-h-[511px] p-5 xss:px-2.5 md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black">
-                        <div className="flex flex-col gap-[21px]">
+                        <form className="flex flex-col gap-[21px]">
                             <div className="">
                                 <h3 className="text-black text-center font-inter text-[21px] leading-[13px] font-bold pb-[13px]">Great to see you again</h3>
                                 <p className="font-inter text-[14px] font-[400] leading-5 text-center max-w-[260px] mx-auto">Sign in to manage fundraisers, donations & more</p>
@@ -54,12 +54,12 @@ function Login(props) {
                                     <Link to="/forgot-password" className="text-[#05192E] text-right font-[500] leading-7 text-[12px] font-ibm ">Forgot password?</Link>
                                 </div>
                                 <div className="flex flex-col gap-[7px]">
-                                    <button className="bg-gradient-cyan text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Log In</button>
+                                    <button className="bg-gradient-cyan bg-gradient-cyan-hover text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Log In</button>
                                     <Link to="/signup" className="text-black font-bold font-inter leading-7 text-center    ">Create Account</Link>
                                 </div>
                             </div>
 
-                        </div>
+                        </form>
                     </div>
                 </div>
                 <div className="hidden xl:block ml-auto">

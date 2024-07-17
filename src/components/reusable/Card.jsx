@@ -10,9 +10,9 @@ function Card({ card }) {
                 <p className="font-[400] text-[14px]">{card.desc}</p>
             </div>
             <div className="flex items-center justify-between">
-                <div className="py-2 px-3 flex justify-center items-center font-popins text-[16px] bg-[#648997] font-[500] gap-[6px] rounded-[36px] w-fit">Donate</div>
+                <div className="py-2 px-3 flex justify-center items-center font-popins text-[16px] bg-[#648997] font-[500] gap-[6px] rounded-[36px] w-fit hover:cursor-pointer">Donate</div>
                 <div className="font-inter text-[14px] font-[500] flex justify-center items-center gap-5">
-                    <p>Share</p>
+                    <p className="hover:cursor-pointer">Share</p>
                     <div className="flex justify-center items-center gap-[13px]">
                         <img src={instagram} alt="Instagram Icon" />
                         <img src={twitter} alt="Twitter Icon" />

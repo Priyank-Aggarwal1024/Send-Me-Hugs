@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help } from './page'
+import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help, GetInTouch } from './page'
 
 function App() {
 
@@ -17,6 +17,7 @@ function App() {
             <Route path='/faq' element={<FaqPage />} />
             <Route path='/about' element={<About />} />
             <Route path='/help' element={<Help />} />
+            <Route path='/get-in-touch' element={<GetInTouch />} />
           </Routes>
         </BrowserRouter>
       </div>

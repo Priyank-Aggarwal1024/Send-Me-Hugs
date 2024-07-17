@@ -149,7 +149,7 @@ function Help(props) {
                                     <div className="font-inter text-[20px] font-[500] pl-[17px]">$25,000.00 </div>
                                 </div>
                             </div>
-                            <button className="bg-gradient-cyan font-popins text-[16px] p-[10px_14px] rounded-[36px]">Donate</button>
+                            <button className="bg-gradient-cyan bg-gradient-cyan-hover font-popins text-[16px] p-[10px_14px] rounded-[36px]">Donate</button>
                             <p className="font-inter text-center text-[14px] leading-5 text-[rgba(93,93,93,1)]">Card, Netbanking, Cheque pickups</p>
                             <div className="grid grid-cols-4 gap-3 items-center px-5 font-inter text-center text-[14px] leading-5 text-[rgba(93,93,93,1)]">
                                 <div className="h-[1px] bg-[rgba(156,51,83,0.18)]"></div>
@@ -181,11 +181,14 @@ function Help(props) {
 
                 </div>
             </div>
-            <Footer />
-            <div className="px-4 md:px-0 my-3">
-                <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+            <div className="bg-[rgba(53,85,92,0.30)]">
+
+                <Footer />
+                <div className="px-4 md:px-0 my-3">
+                    <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+                </div>
+                <FooterBottom />
             </div>
-            <FooterBottom />
         </div>
     );
 }

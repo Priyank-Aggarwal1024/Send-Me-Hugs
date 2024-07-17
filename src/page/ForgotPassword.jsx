@@ -6,7 +6,7 @@ function ForgotPassword(props) {
     return (
         <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 min-h-[100vh] md:h-[100vh]  items-center">
             <div className="flex justify-center items-center">
-                <div className="sm:max-w-[417px] xl:min-h-[511px] p-5 xss:px-2.5  md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black flex flex-col gap-6">
+                <form className="sm:max-w-[417px] xl:min-h-[511px] p-5 xss:px-2.5  md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black flex flex-col gap-6">
                     <div className="flex flex-col gap-[21px]">
                         <div className="">
                             <h3 className="text-black text-center font-inter text-[21px] leading-[13px] font-bold pb-[13px]">Reset Password</h3>
@@ -49,9 +49,9 @@ function ForgotPassword(props) {
                         </div>
                     </div>
                     <div className="flex flex-col gap-[10px]">
-                        <button className="bg-gradient-cyan text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Change Password</button>
+                        <button className="bg-gradient-cyan-hover bg-gradient-cyan  text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Change Password</button>
                     </div>
-                </div>
+                </form>
             </div>
             <div className="hidden xl:block ml-auto">
                 <img src={plant} className="md:h-[100vh]" alt="Plant Image" />

@@ -65,9 +65,10 @@ import plant from './plant.svg'
 import navArrow from './nav-arrow.svg'
 import bd3 from './background-grad.png'
 import bdlogo from './bdlogo.png'
+import dnavarrow from './down-arrow.svg'
 export {
     logo, loginBtn, homeImg, mobileHeroImg, heroImgRect, avatar1, avatar2, avatar3, avatar4, networkDesign, picon, sicon, web3icon, si1, si2, si3, support, larrow, rarrow, logo2, of1, of2, of3, ngo1, ngo2, ngo3, facebook, instagram, twitter, uarrow, darrow,
     smh1, smh2, smh3, smh4, smh5,
     smh6, smh7, smh8, smh9, child, money, mmoney, mchild, telegram, youtube, discord, privacy, aLogo, aImg, graph, pay1
-    , pay2, pay3, pay4, pay5, pay6, helpImg, graph2, hav1, hav2, hav3, hav4, plant, navArrow, bd3, bdlogo
+    , pay2, pay3, pay4, pay5, pay6, helpImg, graph2, hav1, hav2, hav3, hav4, plant, navArrow, bd3, bdlogo, dnavarrow
 };

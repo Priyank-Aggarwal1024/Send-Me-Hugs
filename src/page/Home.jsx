@@ -102,7 +102,7 @@ function Home(props) {
                                 </div>
                             </div>
                         </div>
-                        <button className="px-3.5 py-2.5 bg-gradient-cyan sm:mx-auto rounded-[36px]">Start Send Me Hugs</button>
+                        <button className="px-3.5 py-2.5 bg-gradient-cyan bg-gradient-cyan-hover sm:mx-auto rounded-[36px]">Start Send Me Hugs</button>
                     </div>
                 </div>
                 <ExampleFundraiser />
@@ -113,7 +113,7 @@ function Home(props) {
                             <div className="flex flex-col gap-[23px] items-center md:items-start">
                                 <h2 className="font-inter font-[700] text-black xl:text-[32px] text-[24px] xl:leading-[44px] leading-[30px] -tracking-[.8px] text-center md:text-start">Join the millions of people fundraising for a
                                     cause they care about on SendMeHugs</h2>
-                                <button className="px-3.5 py-2.5 text-white bg-gradient-cyan w-full sm:w-fit rounded-[36px]">Start Send Me Hugs</button>
+                                <button className="px-3.5 py-2.5 text-white bg-gradient-cyan bg-gradient-cyan-hover w-full sm:w-fit rounded-[36px]">Start Send Me Hugs</button>
                             </div>
                         </div>
 
@@ -129,7 +129,7 @@ function Home(props) {
                                 <h2 className="font-inter font-[700] text-[32px] leading-[36px] md:text-start -tracking-[.64px]">Frequently asked Questions</h2>
 
                             </div>
-                            <div className="p-[8px_12px] flex justify-center items-center gap-1 font-popins text-[16px] rounded-[36px] border-[1px] border-[#1DD2B4] mr-auto text-primary-500 w-fit">Any Question?</div>
+                            <div className="p-[8px_12px] flex justify-center items-center gap-1 font-popins text-[16px] rounded-[36px] border-[1px] border-[#1DD2B4] mr-auto text-primary-500 w-fit hover:cursor-pointer">Any Question?</div>
                         </div>
                         <Faq />
 
@@ -150,31 +150,34 @@ function Home(props) {
                     </div>
                 </div>
                 <div className="max-w-[1512px] mx-auto mt-[66px] 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] grid gap-5 lg:grid-cols-2 text-white pb-[38px] sm:pb-[66px]">
-                    <div className="relative">
+                    <div className="relative min-h-[350px]">
                         <img className="w-[100%] hidden sm:block" src={money} alt="Money" />
                         <img className="w-[100%] sm:hidden" src={mmoney} alt="Money" />
                         <div className="mask absolute top-0 h-[100%] w-[100%] py-5 px-6 ">
                             <h2 className="font-inter font-[700] text-[28px] leading-[36px] sm:text-[36px] sm:leading-[48px] -tracking-[.8px] ">Asking for help feels big.</h2>
                             <h2 className="font-inter font-[700] text-[28px] leading-[36px] sm:text-[36px] sm:leading-[48px] -tracking-[.8px]" > Let’s start small.</h2>
-                            <button className="bg-gradient-cyan font-popins text-[16px] p-[10px_14px] mt-5 rounded-[36px] font-[500]">Start Send Me Hugs</button>
+                            <button className="bg-gradient-cyan bg-gradient-cyan-hover font-popins text-[16px] p-[10px_14px] mt-5 rounded-[36px] font-[500]">Start Send Me Hugs</button>
                         </div>
                     </div>
-                    <div className="relative">
+                    <div className="relative min-h-[350px]">
                         <img className="w-[100%] hidden sm:block" src={child} alt="Child" />
                         <img className="w-[100%] sm:hidden" src={mchild} alt="Child" />
                         <div className="mask absolute top-0 h-[100%] w-[100%] py-5 px-6 ">
                             <h2 className="font-inter font-[700] text-[28px] leading-[36px] sm:text-[36px] sm:leading-[48px] -tracking-[.8px] ">Still need help?</h2>
                             <h2 className="font-inter font-[700] text-[28px] leading-[36px] sm:text-[36px] sm:leading-[48px] -tracking-[.8px] ">We’re here for you.</h2>
-                            <button className="bg-[#4F4F4F] font-popins text-[16px] p-[10px_14px] mt-5 rounded-[38px] font-[500]">Visit Help Center</button>
+                            <button className="bg-gradient-cyan bg-gradient-cyan-hover  font-popins text-[16px] p-[10px_14px] mt-5 rounded-[38px] font-[500]">Visit Help Center</button>
                         </div>
 
                     </div>
                 </div>
-                <Footer />
-                <div className="px-4 md:px-0 my-3">
-                    <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+                <div className="bg-[rgba(53,85,92,0.30)]">
+
+                    <Footer />
+                    <div className="px-4 md:px-0 my-3">
+                        <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+                    </div>
+                    <FooterBottom />
                 </div>
-                <FooterBottom />
             </div>
         </>
     );

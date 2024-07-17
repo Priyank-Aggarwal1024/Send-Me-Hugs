@@ -5,4 +5,5 @@ import Signin from "./Signin";
 import FaqPage from "./FaqPage";
 import About from "./About";
 import Help from "./Help";
-export { Home, ForgotPassword, Login, Signin, FaqPage, About, Help }
+import GetInTouch from "./GetInTouch";
+export { Home, ForgotPassword, Login, Signin, FaqPage, About, Help, GetInTouch }

@@ -4,40 +4,18 @@ import { avatar1, avatar2, avatar3, avatar4, heroImgRect, homeImg, mobileHeroImg
 function Hero(props) {
     return (
         <>
-            <div className="hero max-w-[1512px] min-h-[1123px] pt-0 relative mx-auto bg-dark-cyan xl:p-[15px_96px] 2xl:p-[0_156px] overflow-hidden">
+            <div className="hero max-w-[1512px] top-[78px] min-h-[1123px] pt-0 relative mx-auto xl:p-[15px_96px] 2xl:p-[0_156px] overflow-hidden  xlg:bg-[url(/src/assets/hero-design.png)] bg-[url(/src/assets/hero-design2.png)] bg-cover">
                 <div className="hero-img xlg:absolute relative right-0 top-0 z-[2]">
                     <img className="xlg:block hidden 2xl:w-[calc(855px_-_0px)] lg:w-[calc(100vw_-_400px)] xl:w-[calc(100vw_-_600px)] " src={homeImg} alt="Home Girl Image" />
                     <img className="xlg:hidden block" src={mobileHeroImg} alt="Home Girl Image" />
                     <img className="xlg:hidden block absolute top-0 h-[100%]" src={heroImgRect} alt="Home Girl Image rectangle over" />
                 </div>
                 <div className="background-circle-design2"></div>
-                <div className="hero-design absolute h-[calc(100%_+_30px)] -top-[30px] right-0 z-[5] xlg:block hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="1512" height="100%" viewBox="0 0 1512 1123" fill="none">
-                        <path d="M1195.78 0L0 1123H1512V0H1195.78Z" fill="url(#paint0_linear_1_11131)" fillOpacity="0.18" />
-                        <defs>
-                            <linearGradient id="paint0_linear_1_11131" x1="756" y1="0" x2="756" y2="1123" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#477068" stopOpacity="0.8" />
-                                <stop offset="1" stopColor="#005E6B" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
-                <div className="hero-design absolute right-0 z-[5] xl:h-[calc(100%_+_30px)] h-[calc(100%_+_15px)]  top-0 xlg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="844" height="1517" viewBox="0 0 844 1517" fill="none">
-                        <path d="M667.485 0L0 1517H844V0H667.485Z" fill="url(#paint0_linear_1_12043)" fillOpacity="0.18" />
-                        <defs>
-                            <linearGradient id="paint0_linear_1_12043" x1="422" y1="0" x2="422" y2="1517" gradientUnits="userSpaceOnUse">
-                                <stop stopColor="#477068" stopOpacity="0.8" />
-                                <stop offset="1" stopColor="#005E6B" />
-                            </linearGradient>
-                        </defs>
-                    </svg>
-                </div>
                 <div className="p-[10px_16px] sm:p-[10px_32px] xl:p-0 relative z-[10] flex flex-col">
                     <div className="max-w-[594px] flex flex-col justify-start items-start gap-[33px] text-white xlg:mt-[31px] mt-[14px] design1-container">
                         <h1 className="font-lato xlg:text-[60px] text-[36px] sm:text-[48px] font-[700]">Start Fundraising on SendMeHugs</h1>
                         <p className="font-inter text-[16px] leading-[28px] sm:text-[18px]">Everything you need to help your fundraiser succeed is here. Start fundraising on the #1 crowdfunding platform today</p>
-                        <button className="bg-gradient-cyan font-popins text-[16px] p-[10px_14px] rounded-[36px]">Start Send Me Hugs</button>
+                        <button className="bg-gradient-cyan-hover bg-gradient-cyan font-popins text-[16px] p-[10px_14px] rounded-[36px]">Start Send Me Hugs</button>
                         <div className="background-circle-design1 designm-1">
 
                         </div>
@@ -85,7 +63,7 @@ function Hero(props) {
                     <img src={networkDesign} alt="Network Design" />
 
                 </div>
-                <div className="para-network relative mt-[40px]  2xl:mt-0 pb-[81px] md:p-10 p-5">
+                <div className="para-network relative mt-[40px]  2xl:mt-0 pb-[81px] md:p-20 p-5">
                     <div className="font-lato lg:text-[36px] text-[24px] text-white font-[700] max-w-[700px] relative ml-auto right-0 ">
                         <span className="relative z-[10]">More than 8,000 people over the world already start fundraising on SendMeHugs</span>
                         <img src={avatar1} alt="Avatar 1" className="z-[2] absolute -top-[50%] md:-left-[20px] -left-[10px] opacity-[0.8]" />

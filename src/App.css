@@ -9,9 +9,32 @@
   --gradient-cyan: linear-gradient(180deg, #2ED7B4 0%, #22816F 100%);
 }
 
+a:hover,
+button:hover {
+  cursor: pointer;
+
+}
+
+.mobile-nav {
+  box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+img:hover {
+  cursor: pointer;
+}
+
+button {
+  transition: all 200ms;
+}
+
 .bg-gradient-cyan {
   background: var(--gradient-cyan);
 }
+
+button.bg-gradient-cyan-hover:hover {
+  background: #4F4F4F;
+}
+
 
 .bg-gradient-card1 {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(26, 98, 114, 0.12) 100%);

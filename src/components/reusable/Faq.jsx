@@ -47,8 +47,8 @@ function Faq(props) {
                     faq.map((item, idx) => {
                         return (
                             <div className="grid gap-[22px] grid-cols-1" key={idx}>
-                                <div className=" flex justify-between items-center" onClick={() => handleFaq(idx)}>
-                                    <p className="font-inter text-[16px] font-[600] max-w-[90%]">{item.ques}</p>
+                                <div className=" flex justify-between items-center hover:cursor-pointer" onClick={() => handleFaq(idx)}>
+                                    <p className="font-inter text-[16px] font-[600] max-w-[90%] ">{item.ques}</p>
                                     <div className="ml-3 w-[20px] h-[20px]">
                                         {
                                             item.checked ? <img className="flex-1" src={uarrow} alt="Checked" /> : <img src={darrow} alt="Un Checked" />

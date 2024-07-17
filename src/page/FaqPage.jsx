@@ -19,11 +19,13 @@ function FaqPage(props) {
                         <Faq />
                     </div>
                 </div>
-                <Footer />
-                <div className="px-4 md:px-0 my-3">
-                    <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+                <div className="bg-[rgba(53,85,92,0.30)]">
+                    <Footer />
+                    <div className="px-4 md:px-0 my-3">
+                        <div className="h-[1px] w-[100%] bg-[#D9D9D9]"></div>
+                    </div>
+                    <FooterBottom />
                 </div>
-                <FooterBottom />
             </div>
         </>
     );

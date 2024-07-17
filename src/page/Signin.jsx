@@ -7,7 +7,7 @@ function Signin(props) {
         <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 min-h-[100vh] md:h-[100vh] items-center">
             <div className="flex justify-center items-center">
                 <div className="sm:max-w-[450px] xl:min-h-[511px] p-5 xss:px-2.5 md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black">
-                    <div className="flex flex-col gap-[21px]">
+                    <form className="flex flex-col gap-[21px]">
                         <div className="">
                             <h3 className="text-black text-center font-inter text-[21px] leading-[13px] font-bold pb-[13px]">Create an account</h3>
                             <p className="font-inter text-[14px] font-[400] leading-5 text-center max-w-[309px] mx-auto">Create your account to start fundraising, donations & more</p>
@@ -54,12 +54,12 @@ function Signin(props) {
                                 <input type="password" name="password" id="password" className="text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder=".........." />
                             </div>
                             <div className="flex flex-col gap-[7px]">
-                                <button className="bg-gradient-cyan text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Create Account</button>
+                                <button className="bg-gradient-cyan bg-gradient-cyan-hover text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Create Account</button>
                                 <Link to="/login" className="text-black font-bold font-inter leading-7 text-center    ">Sign In</Link>
                             </div>
                         </div>
 
-                    </div>
+                    </form>
                 </div>
             </div>
             <div className="hidden xl:block ml-auto">
