@@ -35,7 +35,7 @@ function Hero(props) {
                 <div className="p-[10px_16px] sm:p-[10px_32px] xl:p-0 relative z-[10] flex flex-col">
                     <div className="max-w-[594px] flex flex-col justify-start items-start gap-[33px] text-white xlg:mt-[31px] mt-[14px]">
                         <h1 className="font-lato xlg:text-[60px] text-[36px] sm:text-[48px] font-[700]">Start Fundraising on SendMeHugs</h1>
-                        <p className="font-inter text-[18px]">Everything you need to help your fundraiser succeed is here. Start fundraising on the #1 crowdfunding platform today</p>
+                        <p className="font-inter text-[16px] leading-[28px] sm:text-[18px]">Everything you need to help your fundraiser succeed is here. Start fundraising on the #1 crowdfunding platform today</p>
                         <button className="bg-gradient-cyan font-popins text-[16px] p-[10px_14px] rounded-[36px]">Start Send Me Hugs</button>
                     </div>
                     <div className="hero-cards pt-[24px] 2xl:pt-[155px] xlg:pt-[80px] sm:pt-[39px] grid sm:grid-cols-2 gap-[14px] max-w-[532px]">

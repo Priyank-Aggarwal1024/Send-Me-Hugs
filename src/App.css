@@ -22,3 +22,7 @@
   background: #3E6371;
   box-shadow: 0px 0px 30px 0px rgba(22, 22, 22, 0.25);
 }
+
+.mask {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.74) 100%);
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { ForgotPassword, Home, Login, Signin } from './page'
+import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help } from './page'
 
 function App() {
 
@@ -13,6 +13,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signin />} />
           <Route path='/forgot-password' element={<ForgotPassword />} />
+          <Route path='/faq' element={<FaqPage />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/help' element={<Help />} />
         </Routes>
       </BrowserRouter>
     </>
