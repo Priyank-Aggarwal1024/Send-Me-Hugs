@@ -33,7 +33,7 @@ function Help(props) {
         },
     ]
     return (
-        <div className={`w-[100%] bg-dark-cyan ${navOpen && "fixed"} relative overflow-hidden`}>
+        <div className={`w-[100%] bg-dark-cyan  relative overflow-hidden`}>
             <div className="faq-background-circle-design">
 
             </div>

@@ -5,12 +5,12 @@ function GetInTouch(props) {
     const [navOpen, setNavOpen] = useState(false);
 
     return (
-        <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan overflow-hidden ${navOpen && "fixed"}`}>
+        <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan overflow-hidden `}>
 
             <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
             <div className="faq-background-circle-design"></div>
             <div className="background-circle-design1 faq-design1"></div>
-            <div className="flex flex-col justify-center items-center gap-[28px] max-w-[1512px] relative z-[2] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] md:py-[96px]">
+            <div className="flex flex-col justify-center items-center  gap-[28px] max-w-[1512px] relative z-[2] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] md:py-[96px]">
                 <div className="flex flex-col gap-4">
                     <h2 className="font-lato text-[32px] font-bold leading-10 text-center">Get In Touch</h2>
                     <p className="text-[16px] font-[500] font-inter text-center">24/7 We will answer to your questions and problems</p>

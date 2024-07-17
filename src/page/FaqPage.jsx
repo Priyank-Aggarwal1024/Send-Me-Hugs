@@ -6,7 +6,7 @@ function FaqPage(props) {
 
     return (
         <>
-            <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan overflow-hidden ${navOpen && "fixed"}`}>
+            <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan`}>
 
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <div className="faq-background-circle-design">

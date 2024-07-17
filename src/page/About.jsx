@@ -7,7 +7,7 @@ function About(props) {
 
     return (
         <div>
-            <div className={`w-[100%] bg-dark-cyan relative ${navOpen && "fixed"}`}>
+            <div className={`w-[100%] bg-dark-cyan relative `}>
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <div className="max-w-[1512px] mx-auto text-white ">
                     <div className=" 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-6 ">
