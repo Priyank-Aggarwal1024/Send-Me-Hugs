@@ -5,7 +5,8 @@ import { discord, instagram, privacy, telegram, twitter, youtube } from '../../a
 function FooterBottom(props) {
     return (
         <>
-            <div className="max-w-[1512px] mx-auto 2xl:px-[196px] lg:px-[32px] xl:px-[96px] px-[16px] min-h-[34px] flex justify-between text-white md:pb-3 pb-[22px] items-center flex-col md:flex-row gap-[22px]">
+            {/* max-w-[1512px]  */}
+            <div className="mx-auto 2xl:px-[196px] lg:px-[32px] xl:px-[96px] px-[16px] min-h-[34px] flex justify-between text-white md:pb-3 pb-[22px] items-center flex-col md:flex-row gap-[22px]">
                 <div className="font-inter text-[12px] font-[400] leading-6 flex items-center flex-col md:flex-row">
                     <span className="font-inter text-[12px] font-[400] leading-6 hidden xl:inline-block">© 2010-2024 GoFundMe</span>
                     <Link className="p-[5px_9px]">Terms</Link>

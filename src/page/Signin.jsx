@@ -1,13 +1,19 @@
 import React from 'react';
 import { plant } from '../assets';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form';
 
 function Signin(props) {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
+        console.log("Form Submitted")
+    }
+    console.log(errors)
     return (
         <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 min-h-[100vh] md:h-[100vh] items-center">
             <div className="flex justify-center items-center">
                 <div className="sm:max-w-[450px] xl:min-h-[511px] p-5 xss:px-2.5 md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black">
-                    <form className="flex flex-col gap-[21px]">
+                    <form className="flex flex-col gap-[21px]" onSubmit={handleSubmit(onSubmit)} action='/' method='POST'>
                         <div className="">
                             <h3 className="text-black text-center font-inter text-[21px] leading-[13px] font-bold pb-[13px]">Create an account</h3>
                             <p className="font-inter text-[14px] font-[400] leading-5 text-center max-w-[309px] mx-auto">Create your account to start fundraising, donations & more</p>
@@ -41,17 +47,17 @@ function Signin(props) {
                                 <p className="text-[#A3A3A3] text-[12px]">OR</p>
                                 <div className="h-[1px] w-[128px] xss:w-[30%] bg-[#CDCDCD]"></div>
                             </div>
-                            <div className="h-[64px] flex justify-end flex-col relative">
-                                <label htmlFor="f-name" className="text-[12px] font-[500]">First Name</label>
-                                <input type="text" name="f-name" id="f-name" className="text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="First Name" />
+                            <div className="h-[64px] flex justify-end flex-col relative form-group">
+                                <input type="text" {...register("f-name", { required: "Field is requiered" })} id="f-name" className="form-input text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="Adam" />
+                                <label htmlFor="f-name" className="form-label text-[12px] font-[500]">First Name</label>
                             </div>
-                            <div className="h-[64px] flex justify-end flex-col relative">
-                                <label htmlFor="email" className="text-[12px] font-[500]">Email</label>
-                                <input type="email" name="email" id="email" className="text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="adam_smith@hotmail.com" />
+                            <div className="h-[64px] form-group flex justify-end flex-col relative">
+                                <input type="email" {...register("email", { required: "Field is requiered" })} id="email" className="form-input text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="adam_smith@hotmail.com" />
+                                <label htmlFor="email" className="form-label text-[12px] font-[500]">Email</label>
                             </div>
-                            <div className="h-[64px] flex justify-end flex-col relative">
-                                <label htmlFor="password" className="text-[12px] font-[500]">Password</label>
-                                <input type="password" name="password" id="password" className="text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder=".........." />
+                            <div className="form-group h-[64px] flex justify-end flex-col relative">
+                                <input type="password" {...register("password", { required: "Field is requiered" })} id="password" className="form-input text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder=".........." />
+                                <label htmlFor="password" className="form-label text-[12px] font-[500]">Password</label>
                             </div>
                             <div className="flex flex-col gap-[7px]">
                                 <button className="bg-gradient-cyan bg-gradient-cyan-hover text-white font-[500] font-popins text-[16px] p-[10px_14px] rounded-[36px]">Create Account</button>

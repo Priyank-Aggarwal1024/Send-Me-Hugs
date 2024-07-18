@@ -24,7 +24,7 @@ function Navbar({ navOpen, setNavOpen }) {
     }
     return (
         <>
-            <nav className="max-w-[1512px] bg-dark-cyan p-[10px_16px] h-[78px] sm:p-[10px_32px] xl:p-[15px_96px] mx-auto 2xl:p-[15px_156px] flex justify-between items-center sticky top-0 z-[20] w-[100%]">
+            <nav className="w-[100vw] bg-dark-cyan p-[10px_16px] h-[78px] sm:p-[10px_32px] xl:p-[15px_96px] mx-auto 2xl:p-[15px_156px] flex justify-between items-center sticky top-0 z-[20]">
 
                 <div className="logo flex justify-center items-center gap-[22px] xss:gap-2.5">
                     <div className="xlg:hidden" onClick={() => setNavOpen(true)}>

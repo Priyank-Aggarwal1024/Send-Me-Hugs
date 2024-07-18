@@ -1,14 +1,20 @@
 import React from 'react';
 import { plant } from '../assets';
 import { Link } from 'react-router-dom';
+import { useForm } from 'react-hook-form'
 
 function Login(props) {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const onSubmit = (data) => {
+        console.log("Form Submitted")
+    }
+    console.log(errors)
     return (
         <>
             <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 md:h-[100vh] min-h-[100vh] items-center">
                 <div className="flex justify-center items-center">
                     <div className="sm:max-w-[450px] xl:min-h-[511px] p-5 xss:px-2.5 md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black">
-                        <form className="flex flex-col gap-[21px]">
+                        <form className="flex flex-col gap-[21px]" onSubmit={handleSubmit(onSubmit)} action='/' method='POST'>
                             <div className="">
                                 <h3 className="text-black text-center font-inter text-[21px] leading-[13px] font-bold pb-[13px]">Great to see you again</h3>
                                 <p className="font-inter text-[14px] font-[400] leading-5 text-center max-w-[260px] mx-auto">Sign in to manage fundraisers, donations & more</p>
@@ -45,10 +51,12 @@ function Login(props) {
                                     </div>
                                 </div>
                                 <div className="h-[64px] flex justify-end flex-col relative">
-                                    <input type="text" name="f-name" id="f-name" className="outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="First Name" />
+                                    <input type="text" {...register("f-name", { required: "Field is requiered" })} id="f-name" className="form-input outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="First Name" />
+                                    <label htmlFor="f-name" className="form-label text-[12px] font-[500]">First Name</label>
                                 </div>
                                 <div className="h-[64px] flex justify-end flex-col relative">
-                                    <input type="text" name="l-name" id="l-name" className="outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="Last Name" />
+                                    <input type="text" {...register("l-name", { required: "Field is requiered" })} id="l-name" className="form-input outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder="Last Name" />
+                                    <label htmlFor="l-name" className="form-label text-[12px] font-[500]">First Name</label>
                                 </div>
                                 <div className="ml-auto">
                                     <Link to="/forgot-password" className="text-[#05192E] text-right font-[500] leading-7 text-[12px] font-ibm ">Forgot password?</Link>

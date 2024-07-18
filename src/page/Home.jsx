@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { ExampleFundraiser, Fundraising, Hero, Navbar, Faq, Card2, Footer, FooterBottom } from '../components';
 import { child, logo2, mchild, mmoney, money, si1, si2, si3, smh1, smh2, smh3, smh4, smh5, smh6, smh7, smh8, smh9 } from '../assets';
-import { Link } from 'react-router-dom';
 
 function Home(props) {
     const smh = [
@@ -62,10 +61,13 @@ function Home(props) {
         },
     ]
     const [navOpen, setNavOpen] = useState(false);
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
             <div className={`home w-[100%] bg-dark-cyan `}>
+
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <Hero />
                 <div className="max-w-[1512px] mx-auto pt-[18px] sm:pt-[75px] 2xl:px-[156px] lg:px-[33px] xl:px-[96px] px-[16px]">

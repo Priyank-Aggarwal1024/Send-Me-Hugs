@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { avatar1, avatar2, avatar3, avatar4, heroImgRect, homeImg, mobileHeroImg, networkDesign, picon, sicon, web3icon } from '../../assets';
 
 function Hero(props) {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <>
-            <div className="hero max-w-[1512px] mx-auto min-h-[1123px] pt-0 relative xl:p-[15px_96px] 2xl:p-[0_156px] overflow-hidden  xlg:bg-[url(/src/assets/hero-design.png)] bg-[url(/src/assets/hero-design2.png)] bg-cover">
+            {/* max-w-[1512px]  */}
+            <div className="hero mx-auto min-h-[1123px] pt-0 relative bg-cover xl:p-[15px_96px] 2xl:p-[0_156px] overflow-hidden  xlg:bg-[url(/src/assets/hero-design.png)] bg-[url(/src/assets/hero-design2.png)] ">
                 <div className="hero-img xlg:absolute relative right-0 top-0 z-[2]">
                     <img className="xlg:block hidden 2xl:w-[calc(855px_-_0px)] lg:w-[calc(100vw_-_400px)] xl:w-[calc(100vw_-_600px)] " src={homeImg} alt="Home Girl Image" />
                     <img className="xlg:hidden block" src={mobileHeroImg} alt="Home Girl Image" />

@@ -57,7 +57,7 @@ function Fundraising(props) {
     ]
     return (
         <>
-            <div className="w-[100%] px-4 sm:px-[34px] text-white max-w-[1200px] mx-auto flex flex-col gap-[25px]">
+            <div className="w-[100%] px-4 xl:px-0 sm:px-[34px] text-white max-w-[1200px] mx-auto flex flex-col gap-[25px]">
                 <div className="flex flex-col gap-6">
                     <h2 className="font-inter font-[700] md:text-[32px] text-[24px] leading-[36px] text-start -tracking-[.64px]">Ongoing Fundraising</h2>
                     <div className="grid xl:grid-cols-3 gap-5 md:grid-cols-2">

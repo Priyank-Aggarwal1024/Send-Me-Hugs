@@ -60,7 +60,7 @@ function Faq(props) {
                                     <div className="h-[1px] bg-white w-full"></div>
 
                                 }
-                                <div className={`font-sans text-[14px] text-[rgba(255,255,255,0.70)] font-[400] ${item.checked ? "h-auto" : "h-0 overflow-hidden"}`}>{item.ans}</div>
+                                <div className={`font-sans text-[14px] text-[rgba(255,255,255,0.70)] font-[400] ${item.checked ? "h-auto " : "h-0 overflow-hidden"}`}>{item.ans}</div>
                                 {
                                     item.checked &&
                                     <div className="h-[1px] bg-white w-full mb-[22px]"></div>

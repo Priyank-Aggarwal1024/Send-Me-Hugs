@@ -1,8 +1,8 @@
 import React from 'react';
 import { support } from '../../assets';
-function CarouselCard({ prevHandle, nextHandle }) {
+function CarouselCard({ prevHandle, nextHandle, item }) {
     return (
-        <div className="flex gap-[53px] xlg:items-center xlg:justify-between xlg:w-[calc(100%_-_120px)] w-[100%] xlg:flex-row flex-col">
+        <div className="flex gap-[53px] xlg:items-center xlg:justify-around xlg:w-[calc(100%_-_120px)] w-[100%] xlg:flex-row flex-col carousel-animation h-[100%]">
             <div className="xlg:min-w-[300px] flex items-center justify-between gap-2">
                 <div className="xlg:hidden" onClick={prevHandle}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -10,7 +10,7 @@ function CarouselCard({ prevHandle, nextHandle }) {
                     </svg>
                 </div>
 
-                <div className="">
+                <div className="aspect-square w-full">
                     <img className="" src={support} alt="Support for healing" />
                 </div>
                 <div className="xlg:hidden" onClick={nextHandle}>
@@ -21,7 +21,7 @@ function CarouselCard({ prevHandle, nextHandle }) {
             </div>
             <div className=" flex flex-col gap-[27px] xlg:max-w-[359px]">
                 <div className="">
-                    <p className="text-[24px] font-[700] font-inter border-b-2">Support for healing</p>
+                    <p className="text-[24px] font-[700] font-inter border-b-2">Support for healing {item.heading}</p>
 
                     <p className="pt-3 font-inter text-white font-[400] text-[18px]">When Victor received a diagnosis for ALS, his community wanted to show support. His partner started a <span className="font-inter text-primary-500 font-[800] text-[18px]">Send me hugs</span>  to help cover for transportation to treatment, monthly supplements, weekly PT, and much more.</p>
                 </div>

@@ -48,8 +48,11 @@ import money from './money.png'
 import privacy from './privacy.svg'
 import aLogo from './about-logo.svg'
 import aImg from './about-img.png'
-import graph from './graph.svg'
+import aImg2 from './about-img2.png'
+import aImg3 from './about-img3.png'
+import graph from './graph.png'
 import graph2 from './graph2.png'
+import graph3 from './graph3.svg'
 import pay1 from './pay1.svg'
 import pay2 from './pay2.svg'
 import pay3 from './pay3.svg'
@@ -70,5 +73,5 @@ export {
     logo, loginBtn, homeImg, mobileHeroImg, heroImgRect, avatar1, avatar2, avatar3, avatar4, networkDesign, picon, sicon, web3icon, si1, si2, si3, support, larrow, rarrow, logo2, of1, of2, of3, ngo1, ngo2, ngo3, facebook, instagram, twitter, uarrow, darrow,
     smh1, smh2, smh3, smh4, smh5,
     smh6, smh7, smh8, smh9, child, money, mmoney, mchild, telegram, youtube, discord, privacy, aLogo, aImg, graph, pay1
-    , pay2, pay3, pay4, pay5, pay6, helpImg, graph2, hav1, hav2, hav3, hav4, plant, navArrow, bd3, bdlogo, dnavarrow
+    , pay2, pay3, pay4, pay5, pay6, helpImg, graph2, hav1, hav2, hav3, hav4, plant, navArrow, bd3, bdlogo, dnavarrow, aImg2, aImg3, graph3
 };

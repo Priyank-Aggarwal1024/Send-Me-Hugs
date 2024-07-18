@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Footer, FooterBottom, Navbar } from '../components';
-import { aImg, aLogo, networkDesign } from '../assets';
+import { aImg, aImg2, aImg3, aLogo, networkDesign } from '../assets';
 
 function About(props) {
     const [navOpen, setNavOpen] = useState(false);
-
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (
         <div>
             <div className={`w-[100%] bg-dark-cyan relative `}>
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
-                <div className="max-w-[1512px] mx-auto text-white ">
+                <div className="mx-auto text-white ">
+                    <div className=" pb-6 w-[100%] relative h-[100%]">
+                        <img className="hidden xl:block w-[100%]" src={aImg} alt="About Image" />
+                        <img className="hidden sm:block xl:hidden w-[100%]" src={aImg2} alt="About Image" />
+                        <img className="block sm:hidden w-[100%]" src={aImg3} alt="About Image" />
+                    </div>
                     <div className=" 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-6 ">
-                        <div className=" pb-6">
-                            <img src={aImg} alt="About Image" />
-                        </div>
+
                         <div className="flex flex-col gap-[14px] text-center pb-[48px] relative">
                             <h2 className="font-lato font-[700] text-[32px] leading-[40px]">About Us</h2>
                             <p className="text-[14px] font-[500] leading-6 font-inter">There’s a part of every one of us that dreams of a better world. That spark of inspiration to help a person, fix a neighborhood, or even change a nation. At Send me hugs, we empower both individuals and nonprofits to turn compassion into action. Because that is how change happens.

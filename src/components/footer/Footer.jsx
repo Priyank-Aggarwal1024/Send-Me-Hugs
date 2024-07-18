@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Footer(props) {
     return (
-        <footer className="max-w-[1512px] mx-auto 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px]  pt-4 sm:pt-5 pb-[32px] md:pb-[12px] xss:pb-5 text-white flex justify-between flex-col md:flex-row  lg:gap-0 md:gap-10 ">
+        // max-w-[1512px] 
+        <footer className="mx-auto 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px]  pt-4 sm:pt-5 pb-[32px] md:pb-[12px] xss:pb-5 text-white flex justify-between flex-col md:flex-row  lg:gap-0 md:gap-10 ">
             <div className="footer-logo pb-[14px]">
                 <img src={logo} alt="Logo" />
             </div>

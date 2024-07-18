@@ -26,6 +26,9 @@ export default {
         },
         xlg: {
           min: '844px',
+        },
+        xxl: {
+          min: "1512px"
         }
       },
       backgroundColor: {
