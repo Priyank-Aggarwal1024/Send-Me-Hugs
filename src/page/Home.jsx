@@ -78,29 +78,29 @@ function Home(props) {
                         </div>
                         <div className="grid xlg:grid-cols-3 gap-5 sm:grid-cols-2">
                             <div className="p-[12px] gap-[12px] flex flex-col h-[416px] rounded-[8px] bg-[#325765]">
-                                <img src={si1} alt="Our tools help create your fundraiser" />
+                                <img src={si1} className="xlg:h-auto h-[179px]" alt="Our tools help create your fundraiser" />
                                 <div className="p-[3px_8px] bg-[#5A8B9D] rounded-[4px] flex items-center justify-center w-fit font-[600] font-manrope text-[12px]">Step 1</div>
                                 <div className="flex flex-col gap-[12px]">
-                                    <p className="font-inter font-[700] text-[20px] max-w-[300px]">Our tools help create your fundraiser</p>
-                                    <p className="font-inter font-[400] text-[14px]">Click the ‘Start Send Me Hugs’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime.</p>
+                                    <p className="font-inter font-[700] text-[20px] max-w-[300px] leading-6">Our tools help create your fundraiser</p>
+                                    <p className="font-inter font-[400] text-[14px] leading-[22px]">Click the ‘Start Send Me Hugs’ button to get started. You’ll be guided by prompts to add fundraiser details and set your goal, which can be changed anytime.</p>
                                 </div>
                             </div>
                             <div className="p-[12px] gap-[12px] flex flex-col h-[416px] rounded-[8px] bg-[#325765]">
-                                <img src={si2} alt="Share your fundraiser link to reach donors" />
+                                <img src={si2} className="xlg:h-auto h-[179px]" alt="Share your fundraiser link to reach donors" />
                                 <div className="p-[3px_8px] bg-[#5A8B9D] rounded-[4px] flex items-center justify-center w-fit font-[600] font-manrope text-[12px]">Step 2</div>
                                 <div className="flex flex-col gap-[12px]">
-                                    <p className="font-inter font-[700] text-[20px] max-w-[300px]">Share your fundraiser
+                                    <p className="font-inter font-[700] text-[20px] max-w-[300px] leading-6">Share your fundraiser
                                         link to reach donors</p>
-                                    <p className="font-inter font-[400] text-[14px]">Once live, share your fundraiser link with friends and family to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your Send Me Hugs dashboard.</p>
+                                    <p className="font-inter font-[400] text-[14px] leading-[22px]">Once live, share your fundraiser link with friends and family to start gaining momentum. You’ll also find helpful resources for running your fundraiser in your Send Me Hugs dashboard.</p>
                                 </div>
                             </div>
                             <div className="p-[12px] gap-[12px] flex flex-col h-[416px] rounded-[8px] bg-[#325765]">
-                                <img src={si3} alt="Our tools help creat your fundraiser" />
+                                <img src={si3} className="xlg:h-auto h-[179px]" alt="Our tools help creat your fundraiser" />
                                 <div className="p-[3px_8px] bg-[#5A8B9D] rounded-[4px] flex items-center justify-center w-fit font-[600] font-manrope text-[12px]">Step 3</div>
                                 <div className="flex flex-col gap-[12px]">
-                                    <p className="font-inter font-[700] text-[20px] max-w-[300px]">Our tools help create
+                                    <p className="font-inter font-[700] text-[20px] max-w-[300px] leading-6">Our tools help create
                                         your fundraiser</p>
-                                    <p className="font-inter font-[400] text-[14px]">Add your bank information, or invite your intended recipient to add theirs, to securely start receiving funds. You don’t need to reach your fundraising goal to start receiving funds.</p>
+                                    <p className="font-inter font-[400] text-[14px] leading-[22px]">Add your bank information, or invite your intended recipient to add theirs, to securely start receiving funds. You don’t need to reach your fundraising goal to start receiving funds.</p>
                                 </div>
                             </div>
                         </div>
