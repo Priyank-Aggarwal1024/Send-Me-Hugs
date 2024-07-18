@@ -98,7 +98,7 @@ function Navbar({ navOpen, setNavOpen }) {
                     <img className="hover:cursor-pointer" src={loginBtn} alt="Login Button" onClick={() => navigate("/login")} />
                 </div>
             </nav>
-            <div className={`mobile-nav pt-[15px] gap-[72px] min-h-[100vh] overflow-auto absolute z-[100] ${navOpen ? "left-[0px] duration-200" : "-left-[375px] "} top-0 min-w-[375px] xss:w-[100%] xss:min-w-[unset] bg-[#062832] flex items-center text-white flex-col xlg:hidden`}>
+            <div className={`mobile-nav pt-[15px] gap-[72px] min-h-[100vh] overflow-auto absolute z-[100] ${navOpen ? "left-[0px] duration-200 sticky top-0" : "-left-[375px] "} top-0 min-w-[375px] xss:w-[100%] xss:min-w-[unset] bg-[#062832] flex items-center text-white flex-col xlg:hidden`}>
                 <svg className="ml-auto mr-[19px]" onClick={() => setNavOpen(false)} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M17 7L7 17M17 17L7 7" stroke="#626B7F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>

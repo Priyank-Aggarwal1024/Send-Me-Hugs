@@ -9,7 +9,7 @@ function About(props) {
     }, [])
     return (
         <div>
-            <div className={`w-[100%] bg-dark-cyan relative `}>
+            <div className={`w-[100%] bg-dark-cyan relative ${navOpen ? "fixed" : ""} `}>
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <div className="mx-auto text-white ">
                     <div className=" pb-6 w-[100%] relative h-[100%]">
