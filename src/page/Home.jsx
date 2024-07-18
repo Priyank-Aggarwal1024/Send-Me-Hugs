@@ -70,7 +70,7 @@ function Home(props) {
 
                 <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
                 <Hero />
-                <div className="max-w-[1512px] mx-auto pt-[18px] sm:pt-[75px] 2xl:px-[156px] lg:px-[33px] xl:px-[96px] px-[16px]">
+                <div className="max-w-[1512px] mx-auto pt-[18px] sm:pt-[75px] 2xl:px-[156px] lg:px-[33px] xl:px-[96px] px-[16px] xlg:bg-[none] bg-[url(/src/assets/background-grad.png)] bg-cover">
                     <div className="flex flex-col gap-[32px] mx-auto max-w-[1200px text-white">
                         <div className="lg:w-[578px] mx-auto">
                             <h2 className="pb-2 font-lato sm:text-[36px] xss:text-[28px] text-[32px] font-[700] text-center">How to start a  SendMeHugs</h2>

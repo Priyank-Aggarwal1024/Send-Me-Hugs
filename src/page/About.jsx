@@ -79,17 +79,17 @@ function About(props) {
                             <h2 className="font-lato font-[700] text-[36px] leading-[46px] text-center">About Us</h2>
                             <p className="pt-2 font-inter text-center leading-7">Here is our 3 benefits to choose us</p>
                         </div>
-                        <div className="max-w-[1200px] grid xlg:grid-cols-3 md:grid-cols-2 gap-5">
-                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3 min-h-[212px]">
+                        <div className="max-w-[1200px] grid grid-cols-1 xlg:grid-cols-3 gap-5">
+                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3">
                                 <h4 className="text-[20px] font-[700] leading-6 font-inter">Our tools help create your fundraiser</h4>
                                 <p className="text-[14px] font-[400] leading-6 font-inter">Our Trust & Safety team works around the clock to ensure your safety and protect against fraud. We also provide the industry’s first and only donor protection guarantee. </p>
                             </div>
-                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3 min-h-[212px]">
+                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3">
                                 <h4 className="text-[20px] font-[700] leading-6 font-inter">Share your fundraiser
                                     link to reach donors</h4>
                                 <p className="text-[14px] font-[400] leading-6 font-inter">We’ve helped families and communities get back on their feet quickly. In just the first 30 days following Hurricane Harvey, GoFundMe delivered over $27 million directly to people affected by the storm.</p>
                             </div>
-                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3 min-h-[212px]">
+                            <div className="bg-[#325765] p-3 rounded-[8px] flex flex-col gap-3">
                                 <h4 className="text-[20px] font-[700] leading-6 font-inter">Our tools help create
                                     your fundraiser</h4>
                                 <p className="text-[14px] font-[400] leading-6 font-inter">GoFundMe helps you easily share your story far and wide over email, text, and social media to rally support for your cause. In addition, we have a dedicated team looking for great stories to amplify and share with the media and our community. </p>

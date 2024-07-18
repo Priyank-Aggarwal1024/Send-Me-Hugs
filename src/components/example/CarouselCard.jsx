@@ -10,7 +10,7 @@ function CarouselCard({ prevHandle, nextHandle, item }) {
                     </svg>
                 </div>
 
-                <div className="aspect-square w-full">
+                <div className="aspect-square w-full flex justify-center items-center">
                     <img className="" src={support} alt="Support for healing" />
                 </div>
                 <div className="xlg:hidden" onClick={nextHandle}>

@@ -121,6 +121,20 @@ button.bg-gradient-cyan-hover:hover {
   z-index: 1;
 }
 
+.background-circle-design4 {
+  width: 308.164px;
+  height: 307.328px;
+  top: 10%;
+  flex-shrink: 0;
+  background: rgba(84, 226, 251, 0.50);
+  filter: blur(100px);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  transform: translateX(-60%);
+  z-index: 1;
+}
+
 .background-circle-design2 {
   width: 680.21px;
   height: 679.069px;
