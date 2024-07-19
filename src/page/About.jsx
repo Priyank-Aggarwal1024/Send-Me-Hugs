@@ -4,9 +4,7 @@ import { aImg, aImg2, aImg3, aLogo, networkDesign } from '../assets';
 
 function About(props) {
     const [navOpen, setNavOpen] = useState(false);
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
     return (
         <div>
             <div className={`w-[100%] bg-dark-cyan `}>

@@ -32,9 +32,7 @@ function Help(props) {
             user: "User"
         },
     ]
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
     return (
         <div className={`w-[100%] bg-dark-cyan  relative`}>
             <div className="faq-background-circle-design">

@@ -3,9 +3,7 @@ import { Faq, Footer, FooterBottom, Navbar } from '../components';
 
 function FaqPage(props) {
     const [navOpen, setNavOpen] = useState(false);
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
     return (
         <>
             <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan min-h-screen flex flex-col justify-between`}>

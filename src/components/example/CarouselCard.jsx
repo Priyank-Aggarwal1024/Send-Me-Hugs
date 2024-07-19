@@ -2,7 +2,7 @@ import React from 'react';
 import { support } from '../../assets';
 function CarouselCard({ prevHandle, nextHandle, item }) {
     return (
-        <div className="flex gap-[53px] xlg:items-center xlg:justify-around xlg:w-[calc(100%_-_120px)] w-[100%] xlg:flex-row flex-col carousel-animation h-[100%]">
+        <div className="flex gap-[53px] xlg:items-center xlg:justify-around xlg:w-[calc(100%_-_120px)] w-[100%] xlg:flex-row flex-col  h-[100%]">
             <div className="xlg:min-w-[300px] flex items-center justify-between gap-2">
                 <div className="xlg:hidden" onClick={prevHandle}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
@@ -11,7 +11,7 @@ function CarouselCard({ prevHandle, nextHandle, item }) {
                 </div>
 
                 <div className="aspect-square w-full flex justify-center items-center">
-                    <img className="" src={support} alt="Support for healing" />
+                    <img className="carousel-animation" src={support} alt="Support for healing" />
                 </div>
                 <div className="xlg:hidden" onClick={nextHandle}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="37" height="36" viewBox="0 0 37 36" fill="none">
@@ -19,7 +19,7 @@ function CarouselCard({ prevHandle, nextHandle, item }) {
                     </svg>
                 </div>
             </div>
-            <div className=" flex flex-col gap-[27px] xlg:max-w-[359px]">
+            <div className=" flex flex-col gap-[27px] xlg:max-w-[359px] carousel-animation">
                 <div className="">
                     <p className="text-[24px] font-[700] font-inter border-b-2">Support for healing {item.heading}</p>
 

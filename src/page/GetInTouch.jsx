@@ -9,9 +9,7 @@ function GetInTouch(props) {
         console.log("Form Submitted")
     }
     console.log(errors)
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
     return (
         <div className={`w-[100%] relative max-w-[100vw] bg-dark-cyan `}>
 

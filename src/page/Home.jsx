@@ -61,9 +61,7 @@ function Home(props) {
         },
     ]
     const [navOpen, setNavOpen] = useState(false);
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+
     return (
         <>
             <div className={`home w-[100%] bg-dark-cyan `}>
