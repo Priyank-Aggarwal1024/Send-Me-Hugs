@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help, GetInTouch } from './page'
 
 function App() {
   return (
     <>
-      <div className="app overflow-x-hidden overflow-y-auto h-[100vh] scroll-smooth" ref={app}>
+      <div className="app overflow-x-hidden overflow-y-auto h-[100vh] scroll-smooth">
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
