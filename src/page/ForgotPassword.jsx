@@ -1,5 +1,5 @@
 import React from 'react';
-import { plant } from '../assets';
+import { plant, logo } from '../assets';
 import { useForm } from 'react-hook-form';
 
 function ForgotPassword(props) {
@@ -9,8 +9,8 @@ function ForgotPassword(props) {
     }
     console.log(errors)
     return (
-        <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 min-h-[100vh] md:h-[100vh]  items-center">
-            <div className="flex justify-center items-center">
+        <div className="max-w-[1512px] mx-auto grid xl:grid-cols-2 h-[100vh] md:h-[100vh]">
+            <div className="flex justify-center h-[100%] overflow-y-scroll scrollable-content">
                 <form className="sm:max-w-[417px] xl:min-h-[511px] p-5 xss:px-2.5  md:pt-[52px] sm:px-[55.5px] md:pb-[33px] text-black flex flex-col gap-6" onSubmit={handleSubmit(onSubmit)} action='/' method='POST'>
                     <div className="flex flex-col gap-[21px]">
                         <div className="">
@@ -23,7 +23,7 @@ function ForgotPassword(props) {
                                 <label htmlFor="password" className="form-label text-[12px] font-[500] font-inter">New Password</label>
                             </div>
                             <div className="form-group h-[64px] flex justify-end flex-col relative">
-                                <input type="password" {...register("c-password", { required: "Field is requiered" })} id="c-password" className="form-input text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder=".........." />
+                                <input type="password" {...register("c-password", { required: "Field is requiered", validate: (value, formValue) => value == formValue.password || "Field doesn't match with password" })} id="c-password" className="form-input text-[14px] outline-none border-b border-[#D0D2D5] py-2.5 px-1" placeholder=".........." />
                                 <label htmlFor="c-password" className="form-label text-[12px] font-[500] font-inter">Confirm Password</label>
                             </div>
 
@@ -74,8 +74,18 @@ function ForgotPassword(props) {
                     </div>
                 </form>
             </div>
-            <div className="hidden xl:block ml-auto">
-                <img src={plant} className="md:h-[100vh]" alt="Plant Image" />
+            <div className="hidden xl:block ml-auto relative ">
+                <img src={plant} className="h-[100vh]" alt="Plant Image" />
+                <div className="absolute h-[100%] w-[100%] top-0 right-0 flex flex-col gap-[11px] pt-[42px] pl-[32px]">
+                    <div className="">
+                        <img src={logo} alt="Logo" />
+                    </div>
+                    <div className="flex flex-col gap-1.5">
+                        <h2 className="text-white font-inter leading-[44px] font-bold text-[25px]">Unleash Your Potential for Success</h2>
+                        <p className="text-white font-inter leading-[20px] text-[14px] ">Raise funds online for medical emergencies and social causes</p>
+                    </div>
+
+                </div>
             </div>
         </div>
     );

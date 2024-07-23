@@ -19,6 +19,7 @@ export default {
         popins: "Poppins , sans-serif",
         manrope: "Manrope , sans-serif",
         ibm: "IBM Plex Sans , sans-serif",
+        roboto: "Roboto , sans-serif",
       },
       screens: {
         xss: {

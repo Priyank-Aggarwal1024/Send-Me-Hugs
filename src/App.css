@@ -49,6 +49,58 @@ button:hover {
   bottom: calc(100% - 10px);
 }
 
+.step-form-div {
+  font-family: "Roboto", sans-serif;
+  border-bottom: 1px solid #D0D2D5;
+  padding: 10px 0;
+}
+
+.step-form-input {
+  outline: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.step-form-label {
+  position: absolute;
+  bottom: 10px;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  /* height: 100%; */
+  transition: all 200ms ease-in;
+  color: var(--Foundation-Neutral-neutral-400, #868C93);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.select-countries {
+  color: black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+input::placeholder {
+  color: var(--Foundation-Neutral-neutral-400, #868C93);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.step-form-input:focus~.step-form-label,
+.step-form-input:not(:placeholder-shown).step-form-input:not(:focus)~.step-form-label {
+  bottom: 36px;
+  color: black;
+}
+
+
 .carousel-animation {
   animation: carousel 1000ms ease-in-out 1 forwards;
 }
@@ -214,6 +266,12 @@ button.bg-gradient-cyan-hover:hover {
   transform: translateX(-40%);
   opacity: .5;
 }
+
+.scrollable-content::-webkit-scrollbar {
+  display: none;
+}
+
+
 
 @media(width<1024px) {
   .background-circle-design2 {
