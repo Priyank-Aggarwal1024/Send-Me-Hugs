@@ -7,4 +7,5 @@ import About from "./About";
 import Help from "./Help";
 import GetInTouch from "./GetInTouch";
 import FundraisingForm from "./FundraisingForm";
-export { Home, ForgotPassword, Login, Signin, FaqPage, About, Help, GetInTouch, FundraisingForm, }
+import PhoneVerification from "./PhoneVerification";
+export { Home, ForgotPassword, Login, Signin, FaqPage, About, Help, GetInTouch, FundraisingForm, PhoneVerification }

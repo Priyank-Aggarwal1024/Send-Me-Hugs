@@ -18,5 +18,6 @@ import Step7 from "./reusable/Step7";
 import Step8 from "./reusable/Step8";
 import FundraisingSignIn from "./reusable/FundraisingSignIn";
 import Step10 from "./reusable/Step10";
+import Otp from "./reusable/Otp";
 
-export { Navbar, Hero, ExampleFundraiser, Fundraising, Faq, Card2, Footer, FooterBottom, Help, Card3, Step1, Step10, Step2, Step3, Step4, Step5, Step6, Step7, Step8, FundraisingSignIn }
+export { Navbar, Hero, ExampleFundraiser, Fundraising, Faq, Card2, Footer, FooterBottom, Help, Card3, Step1, Step10, Step2, Step3, Step4, Step5, Step6, Step7, Step8, FundraisingSignIn, Otp }

@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import './App.css'
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
-import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help, GetInTouch, FundraisingForm } from './page'
-import { FundraisingSignIn } from './components'
+import { BrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router-dom'
+import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help, GetInTouch, FundraisingForm, PhoneVerification } from './page'
+import { FundraisingSignIn, Otp, Step10 } from './components'
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
             <Route path='/get-in-touch' element={<GetInTouch />} />
             <Route path='/fundraising' element={<FundraisingForm />} />
             <Route path='/fundraising/signin' element={<FundraisingSignIn />} />
+            <Route path="/phone-verification" element={<PhoneVerification />} />
           </Routes>
         </BrowserRouter>
       </div>
