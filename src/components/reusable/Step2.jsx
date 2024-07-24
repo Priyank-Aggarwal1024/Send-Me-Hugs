@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackButton from './BackButton';
 import ContinueButton from './ContinueButton';
 import { FormLogo } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 
-function Step2({ swiper, register }) {
-    const [fF, setFf] = useState("")
+function Step2({ swiper, register, watch }) {
+    const [fF, setFf] = useState(null)
     const navigate = useNavigate()
+    const [swi, setSwi] = useState(null)
+    useEffect(() => {
+        if (fF) {
+            setSwi(swiper);
+        } else {
+            setSwi(null)
+        }
+    }, [fF])
 
     return (
         <div className="flex flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
@@ -45,7 +53,7 @@ function Step2({ swiper, register }) {
             </div>
             <div className="bottom-buttons flex justify-between items-center pt-5">
                 <BackButton swiper={swiper} />
-                <ContinueButton swiper={swiper} />
+                <ContinueButton swiper={swi} />
             </div>
         </div>
     );

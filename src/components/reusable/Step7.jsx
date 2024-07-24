@@ -22,7 +22,7 @@ function Step7({ swiper, register }) {
                 </div>
                 <div className="flex gap-[14px] w-[100%] sm:flex-row flex-col  items-center justify-center">
                     <p className="py-2 px-3 w-[100%] sm:w-[170px] text-[#298D7C] font-[500]  cursor-pointer leading-6 text-[16px] text-center font-popins border-[#298D7C] border-2 rounded-[36px] bg-[rgba(229,248,244,0.70)]">Skip</p>
-                    <p className="py-2 px-3 w-[100%] sm:w-[170px] text-[#fff] font-[500]  leading-6 text-[16px] text-center font-popins rounded-[36px] bg-gradient-cyan cursor-pointer" onClick={() => swiper?.current?.swiper.slideNext()}>Share</p>
+                    <p className="py-2 px-3 w-[100%] sm:w-[170px] text-[#fff] font-[500]  leading-6 text-[16px] text-center font-popins rounded-[36px] bg-gradient-cyan cursor-pointer">Share</p>
                 </div>
             </div>
         </div>

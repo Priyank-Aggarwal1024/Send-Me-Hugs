@@ -1,49 +1,31 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackButton from './BackButton';
 import ContinueButton from './ContinueButton';
-import { defImg, FormLogo } from '../../assets';
+import { defImg, edit, FormLogo, trash } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 // import { useDropzone } from 'react-dropzone';
-function Step4({ swiper, register, setValue }) {
-    const [selectedFile, setSelectedFile] = useState(null);
+function Step4({ swiper, register, selectedFile, setSelectedFile, watch, setValue }) {
     const navigate = useNavigate()
-
     const handleDragOver = (e) => {
-        console.log("Handle DragOver")
-
         e.preventDefault();
         e.stopPropagation();
     };
 
     const handleDrop = (e) => {
-        console.log("Handle Drop")
         e.preventDefault();
         e.stopPropagation();
         const file = e.dataTransfer.files[0];
         setSelectedFile(file);
-        setValue("file", selectedFile)
+        const dataTransfer = new DataTransfer();
+        dataTransfer.items.add(file);
+        document.getElementById("cover-photo").files = dataTransfer.files;
     };
 
     const handleChange = (e) => {
-        console.log("Handle Change")
-
+        e.preventDefault();
         setSelectedFile(e.target.files[0]);
-        console.log(e.target.files[0])
-        setValue("file", e.target.files[0])
     };
-    console.log(selectedFile)
-    const handlePreview = () => {
-        if (selectedFile) {
-            console.log(selectedFile)
-            setValue("file", selectedFile)
-            const reader = new FileReader();
-            reader.onloadend = () => {
-                // Handle the preview image here, e.g., set it to a state variable
-                console.log(reader.result); // You can use this result to display the image
-            };
-            reader.readAsDataURL(selectedFile);
-        }
-    };
+
     return (
         <div className="flex flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
             <div className="flex flex-col gap-[44px]">
@@ -57,19 +39,19 @@ function Step4({ swiper, register, setValue }) {
                         <h2 className="text-black font-bold text-[21px] font-inter leading-[101%]">Add a cover photo</h2>
                         <p className="font-popins text-[14px] leading-6 text-[#676767]">Use clear and bright photo helps people connect to your fundraiser instantly.</p>
                     </div>
-                    <div className="">
+                    <div className="relative">
 
-                        <input type="file" className="hidden w-[100%] " id="file"
+                        <input type="file" className="z-[2] opacity-0 h-[360px] relative w-[100%] " id="cover-photo"
                             accept="image/*"
+                            {...register('cover-photo')}
                             onChange={handleChange}
-                            {...register('file', { required: 'File is required' })}
-                        />
-                        <div className="flex w-[100%]">
+                            onDragOver={handleDragOver}
+                            onDrop={handleDrop} />
+                        <div className="flex w-[100%] z-[1] absolute top-0">
                             {!selectedFile ? <label
-                                htmlFor="file"
+                                htmlFor="cover-photo"
                                 className="border-dashed border-2  w-[100%] h-[360px] border-gray-400 flex flex-col justify-center items-center gap-[39px]"
-                                onDragOver={handleDragOver}
-                                onDrop={handleDrop}
+
                             >
                                 <img src={defImg} alt="Default Image Icon" />
                                 <p
@@ -81,10 +63,11 @@ function Step4({ swiper, register, setValue }) {
                             </label> : <div className="rounded-lg w-[100%] h-[360px] border-gray-400 flex flex-col justify-center items-center gap-[39px]">
                                 <img src={URL.createObjectURL(selectedFile)} className="rounded-lg bg-contain w-[100%] h-[100%]" alt="Preview Image" />
                             </div>}
-                            {
-                                selectedFile && <div onClick={() => { document.getElementById("file").value = "", setSelectedFile(null) }}>Delete</div>
-                            }
+
                         </div>
+                        {
+                            selectedFile && <div className="flex justify-between pt-2 px-1.5"><img src={edit} alt='Edit' onClick={() => { document.getElementById("cover-photo").files = null, setSelectedFile(null) }} /><img src={trash} alt='Trash' onClick={() => { document.getElementById("cover-photo").files = null, setSelectedFile(null) }} /></div>
+                        }
                         <div className="w-[100%] h-[64px] step-form-div flex justify-end flex-col relative">
                             <p className="my-2 leading-6 text-[14px] font-popins text-[#676767] flex flex-wrap justify-center">OR</p>
                             <div className="flex">

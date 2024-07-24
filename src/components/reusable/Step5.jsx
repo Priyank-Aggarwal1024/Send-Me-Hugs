@@ -4,7 +4,7 @@ import ContinueButton from './ContinueButton';
 import { FormLogo } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 
-function Step5({ swiper, register }) {
+function Step5({ swiper, register, setValue }) {
     const navigate = useNavigate()
 
     return (
@@ -21,7 +21,7 @@ function Step5({ swiper, register }) {
                     </div>
                     <div className="max-w-[334px] w-[100%] h-[64px] step-form-div flex justify-between flex-col relative">
                         <label htmlFor="title" className="w-[100%] font-roboto text-[14px] font-[500] leading-5 text-[#686F78]">Fundraiser title</label>
-                        <input type="text" {...register("title", { required: "Field is Required" })} id="title" className="border-none outline-none font-roboto text-[14px] font-[400] leading-5 text-[#393D42] placeholder:text-[#868C93]" placeholder="Donate to help..." />
+                        <input type="text" {...register("title", { required: "Field is Required" })} id="title" className="border-none outline-none font-roboto text-[14px] font-[400] leading-5 text-[#393D42] placeholder:text-[#868C93]" placeholder="Donate to help..." onChange={(e) => setValue("title", e.target.value)} />
                     </div>
                     <div className="w-[100%] min-h-[64px] step-form-div flex justify-between flex-col relative">
                         <label htmlFor="story" className="w-[100%] font-roboto text-[14px] font-[500] leading-5 text-[#686F78]">Tell your story</label>
@@ -29,7 +29,6 @@ function Step5({ swiper, register }) {
                     </div>
                 </div>
             </div>
-            <button>Submit</button>
             <div className="bottom-buttons flex justify-between items-center pt-5">
                 <BackButton swiper={swiper} />
                 <ContinueButton swiper={swiper} text="Review" />

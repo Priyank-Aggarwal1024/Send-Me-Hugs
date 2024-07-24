@@ -7,6 +7,7 @@ function FundraisingSignIn(props) {
     const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm();
     const onSubmit = (data) => {
         console.log("Form Submitted ", data);
+        navigate("/fundraising")
     }
     const navigate = useNavigate()
     console.log(errors)
@@ -98,7 +99,9 @@ function FundraisingSignIn(props) {
                                     By clicking the Sign Up button below, you agree to the SendmeHugs <span className="underline">Terms of Service</span> and acknowledge the <span className="underline">Privacy Notice</span>
                                 </div>
                                 <div className="flex justify-end itc pt-7">
-                                    <button className="py-2 px-3 w-fit text-[#fff] font-[500]  leading-6 text-[16px] text-center font-popins rounded-[36px] bg-gradient-cyan cursor-pointer" onClick={() => navigate("/fundraising")}>Sign Up</button>
+                                    <button type='submit' className="py-2 px-3 w-fit text-[#fff] font-[500]  leading-6 text-[16px] text-center font-popins rounded-[36px] bg-gradient-cyan cursor-pointer"
+                                    // onClick={() => navigate("/fundraising")}
+                                    >Sign Up</button>
                                 </div>
                             </div>
                         </div>

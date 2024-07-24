@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import BackButton from './BackButton'
 import ContinueButton from './ContinueButton'
 import { FormLogo } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 
-function Step1({ swiper, register }) {
+function Step1({ swiper, register, watch }) {
     const [bestDescribes, setBestDescribes] = useState("")
     const navigate = useNavigate()
-
+    const ct = watch("country");
+    const cate = watch("category");
+    const pin = watch("pincode");
+    const [swi, setSwi] = useState(null)
+    useEffect(() => {
+        if (ct == "" || cate == "" || pin == "") {
+            setSwi(null);
+        } else {
+            setSwi(swiper)
+        }
+    }, [ct, cate, pin])
     return (
         <div className="flex flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
             <div className="">
@@ -40,31 +50,31 @@ function Step1({ swiper, register }) {
                     <div className="flex flex-col gap-[21px]">
                         <p className="text-black font-[500] text-[16px] font-inter leading-5">What best describes why you're fundraising?</p>
                         <div className="flex flex-wrap gap-[11px]">
-                            <input type="radio" className="hidden" id="animals" value="animals" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="animals" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "animals" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("animals")}>Animals</label>
-                            <input type="radio" className="hidden" id="business" value="business" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="business" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "business" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("business")}>Business</label>
-                            <input type="radio" className="hidden" id="community" value="community" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="community" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "community" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("community")}>Community</label>
-                            <input type="radio" className="hidden" id="volunteer" value="volunteer" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="volunteer" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "volunteer" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("volunteer")}>Volunteer</label>
-                            <input type="radio" className="hidden" id="environment" value="environment" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="environment" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "environment" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("environment")}>Environment</label>
-                            <input type="radio" className="hidden" id="funreals-memorials" value="funreals-memorials" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="funreals-memorials" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "funreals-memorials" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("funreals-memorials")}>Funerals & Memorial</label>
-                            <input type="radio" className="hidden" id="ukraine-relief" value="ukraine-relief" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="ukraine-relief" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "ukraine-relief" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("ukraine-relief")}>Ukraine Relief</label>
-                            <input type="radio" className="hidden" id="events" value="events" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="events" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "events" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("events")}>Events</label>
-                            <input type="radio" className="hidden" id="monthly-bills" value="monthly-bills" {...register("best-describes", { required: "Field is Required" })} />
-                            <label htmlFor="monthly-bills" type="text" id="best-describes" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "monthly-bills" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("monthly-bills")}>Monthly Bills</label>
+                            <input type="radio" className="hidden" id="animals" value="animals" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="animals" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "animals" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("animals")}>Animals</label>
+                            <input type="radio" className="hidden" id="business" value="business" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="business" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "business" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("business")}>Business</label>
+                            <input type="radio" className="hidden" id="community" value="community" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="community" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "community" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("community")}>Community</label>
+                            <input type="radio" className="hidden" id="volunteer" value="volunteer" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="volunteer" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "volunteer" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("volunteer")}>Volunteer</label>
+                            <input type="radio" className="hidden" id="environment" value="environment" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="environment" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "environment" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("environment")}>Environment</label>
+                            <input type="radio" className="hidden" id="funreals-memorials" value="funreals-memorials" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="funreals-memorials" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "funreals-memorials" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("funreals-memorials")}>Funerals & Memorial</label>
+                            <input type="radio" className="hidden" id="ukraine-relief" value="ukraine-relief" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="ukraine-relief" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "ukraine-relief" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("ukraine-relief")}>Ukraine Relief</label>
+                            <input type="radio" className="hidden" id="events" value="events" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="events" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "events" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("events")}>Events</label>
+                            <input type="radio" className="hidden" id="monthly-bills" value="monthly-bills" {...register("category", { required: "Field is Required" })} />
+                            <label htmlFor="monthly-bills" type="text" id="category" className={`py-1.5 gap-1 flex justify-center items-center w-fit rounded-[36px] font-popins text-[14px] text-center font-[500] leading-6 border border-[#6B6B6B] ${bestDescribes == "monthly-bills" ? "bg-[rgba(229,229,229,0.40)]" : ""} px-2`} onClick={() => setBestDescribes("monthly-bills")}>Monthly Bills</label>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="bottom-buttons flex justify-between items-center pt-5">
                 <BackButton swiper={swiper} />
-                <ContinueButton swiper={swiper} />
+                <ContinueButton swiper={swi} />
             </div>
         </div>
     );
