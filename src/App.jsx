@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import './App.css'
-import { BrowserRouter, Outlet, Route, Routes, useLocation } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { About, FaqPage, ForgotPassword, Home, Login, Signin, Help, GetInTouch, FundraisingForm, PhoneVerification } from './page'
-import { FundraisingSignIn, Otp, Step10 } from './components'
+import { Admin, Dasboard, FundraisingSignIn, Notifications, Profile, Statistics, Transfers } from './components'
 
 function App() {
   return (
@@ -21,6 +21,13 @@ function App() {
             <Route path='/fundraising' element={<FundraisingForm />} />
             <Route path='/fundraising/signin' element={<FundraisingSignIn />} />
             <Route path="/phone-verification" element={<PhoneVerification />} />
+            <Route path='/' element={<Admin />}>
+              <Route path='dashboard' element={<Dasboard />} />
+              <Route path="notifications" element={<Notifications />} />
+              <Route path="transfers" element={<Transfers />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="statistics" element={<Statistics />} />
+            </Route>
           </Routes>
         </BrowserRouter>
       </div>

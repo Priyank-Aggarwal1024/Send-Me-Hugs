@@ -271,7 +271,9 @@ button.bg-gradient-cyan-hover:hover {
   display: none;
 }
 
-
+.apexcharts-toolbar.apexcharts-toolbar {
+  display: none;
+}
 
 @media(width<1024px) {
   .background-circle-design2 {
