@@ -6,13 +6,13 @@ function Step7({ swiper, register }) {
     const navigate = useNavigate()
 
     return (
-        <div className="flex flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
-            <div className="">
+        <div className="flex create-popup-slide flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
+            <div className="create-popup-hide">
                 <div className="flex w-[100%] justify-between items-center h-[30px]">
                     <img src={FormLogo} alt="SendMeHugs Form Logo" />
                 </div>
             </div>
-            <div className="flex flex-col gap-[30px] h-[calc(100vh_-_30px)] justify-center items-center
+            <div className="create-popup-content flex flex-col gap-[30px] h-[calc(100vh_-_30px)] justify-center items-center
             ">
                 <div className="flex flex-col items-center gap-7">
                     <svg xmlns="http://www.w3.org/2000/svg" width="57" height="56" viewBox="0 0 57 56" fill="none">

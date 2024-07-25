@@ -1,8 +1,8 @@
 import React from 'react';
-import { FormLogo } from '../../assets';
+import { cross, FormLogo } from '../../assets';
 import { Link, NavLink } from 'react-router-dom';
 
-function SideNav(props) {
+function SideNav({ navOpen, setNavOpen }) {
     const linkStyle = ({ isActive }) => {
         return {
             border: isActive ? "1px solid #D0D0D0" : "none",
@@ -15,10 +15,12 @@ function SideNav(props) {
             fill: isActive ? "black" : "#ababab",
         }
     }
+    console.log(navOpen)
     return (
-        <div className="w-[260px] min-h-[100vh] pb-5 bg-white border-r border-[#d0d0d0] flex-col justify-start items-start gap-[22px] inline-flex">
-            <div className="self-stretch h-[68px] px-4 py-5 border-b border-[#d0d0d0] flex-col justify-center items-start gap-2.5 flex" >
+        <div className={`w-[260px] top-0 z-[50] min-h-[100vh] pb-5 bg-white border-r border-[#d0d0d0] flex-col justify-start items-start gap-[22px] ${navOpen ? "left-0 absolute" : "-left-[100%] md:static absolute"}`} >
+            <div className="self-stretch h-[68px] px-4 py-5 border-b border-[#d0d0d0] items-start gap-2.5 flex justify-between" >
                 <img src={FormLogo} alt="Image Fund" />
+                <img src={cross} alt="Close Nav" className="md:hidden" onClick={() => setNavOpen(false)} />
             </div>
             <div className="self-stretch h-[310px] px-3 flex-col justify-start items-start gap-5 flex">
                 <NavLink to="/dashboard" className="group self-stretch px-[9px] py-[5px] hover:px-2 hover:py-1 rounded hover:border hover:border-[#d9d9d9] justify-start items-center gap-2 inline-flex" style={linkStyle}>

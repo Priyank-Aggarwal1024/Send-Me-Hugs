@@ -25,4 +25,5 @@ import Notifications from "./Dasboard/Notifications";
 import Statistics from "./Dasboard/Statistics";
 import Transfers from "./Dasboard/Transfers";
 import Profile from "./Dasboard/Profile";
-export { Navbar, Hero, ExampleFundraiser, Fundraising, Faq, Card2, Footer, FooterBottom, Help, Card3, Step1, Step10, Step2, Step3, Step4, Step5, Step6, Step7, Step8, FundraisingSignIn, Otp, Dasboard, Admin, Notifications, Statistics, Transfers, Profile }
+import FundraiserIten from "./reusable/FundraiserIten";
+export { Navbar, Hero, ExampleFundraiser, Fundraising, Faq, Card2, Footer, FooterBottom, Help, Card3, Step1, Step10, Step2, Step3, Step4, Step5, Step6, Step7, Step8, FundraisingSignIn, Otp, Dasboard, Admin, Notifications, Statistics, Transfers, Profile, FundraiserIten }

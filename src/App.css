@@ -275,6 +275,43 @@ button.bg-gradient-cyan-hover:hover {
   display: none;
 }
 
+.popup-animation {
+  animation: popup 200ms ease-in 1 forwards;
+}
+
+.create-new .create-popup-hide {
+  display: none;
+}
+
+.create-new .create-popup-content {
+  padding-top: 0;
+}
+
+.create-new .create-popup-slide {
+  padding: 0;
+  max-height: fit-content;
+  height: 60vh;
+  padding-bottom: 80px;
+}
+
+.create-new .bottom-buttons {
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  bottom: 0;
+  z-index: 101;
+}
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @media(width<1024px) {
   .background-circle-design2 {
     width: 500.21px;

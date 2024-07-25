@@ -1,18 +1,27 @@
 import React from 'react';
-import { dashAvatar, Notificationbell } from '../../assets';
+import { dArrow2, dashAvatar, Notificationbell } from '../../assets';
 
-function Notifications(props) {
+function Notifications({ navOpen, setNavOpen }) {
     return (
         <div className="flex h-[100vh]  w-[100%] flex-col">
             <div className="pl-[19px] w-[100%] h-[68px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex">
-                <div className="text-center text-black text-[22px] font-semibold font-popins leading-normal">Dashboard</div>
+                <div className="text-center text-black text-[18px] md:text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">
+                    <div className="md:hidden" onClick={() => setNavOpen(true)}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M16.7083 9.16667H3.29167C2.85444 9.16667 2.5 9.52111 2.5 9.95833V10.0417C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0417V9.95833C17.5 9.52111 17.1456 9.16667 16.7083 9.16667Z" fill="black" />
+                            <path d="M16.7083 13.3333H3.29167C2.85444 13.3333 2.5 13.6878 2.5 14.125V14.2083C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2083V14.125C17.5 13.6878 17.1456 13.3333 16.7083 13.3333Z" fill="black" />
+                            <path d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z" fill="black" />
+                        </svg>
+                    </div>
+                    <h2>Notification</h2>
+                </div>
                 <div className="justify-end items-center gap-5 flex">
-                    <div className="justify-start items-center gap-[25px] flex">
+                    <div className="hidden justify-start items-center gap-[25px] md:flex">
                         <div className="w-[375px] h-11 px-3 py-2.5 bg-white rounded border border-[#babdc1] justify-start items-center gap-3 flex">
                             <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
                                 <div className="w-5 h-5 relative" />
                                 <div className="justify-start items-center gap-0.5 flex">
-                                    <div className="text-[#868c93] text-sm font-normal font-['Roboto'] leading-tight">Search</div>
+                                    <div className="text-[#868c93] text-sm font-normal font-roboto leading-tight">Search</div>
                                 </div>
                             </div>
                         </div>
@@ -23,7 +32,7 @@ function Notifications(props) {
                             <img className="w-6 h-6" src={Notificationbell} alt="Notificationbell" />
                         </div>
                         <div className="justify-start items-center gap-2 flex">
-                            <div className="text-center text-black text-sm font-medium font-popins leading-normal">James Brown</div>
+                            <div className="text-center md:block hidden text-black text-sm font-medium font-popins leading-normal">James Brown</div>
                             <div className="w-8 h-8 pr-[3.56px] pb-[1.88px] justify-center items-center flex">
                                 <div className="w-[28.44px] h-[30.12px] flex-col justify-center items-center inline-flex">
                                     <div className="w-[28.44px] h-[30.12px] flex-col justify-center items-center inline-flex">
@@ -34,9 +43,7 @@ function Notifications(props) {
                                 </div>
                             </div>
                             <div className="w-5 h-5 relative" >
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M14 8L10 12L6 8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <img src={dArrow2} alt="Downward Arrow" />
                             </div>
                         </div>
                     </div>

@@ -30,6 +30,10 @@ export default {
         },
         xxl: {
           min: "1512px"
+        },
+        "844": {
+          min: "844px",
+          max: "1023px"
         }
       },
       backgroundColor: {

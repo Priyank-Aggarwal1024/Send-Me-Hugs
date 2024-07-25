@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ContinueButton from './ContinueButton';
 import BackButton from './BackButton';
-import { FormLogo, germany, india, japan, uk, usa } from '../../assets';
+import { dArrow2, FormLogo, germany, india, japan, uk, usa } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 
 function Step10({ register, setTab, tab, setValue }) {
@@ -29,9 +29,7 @@ function Step10({ register, setTab, tab, setValue }) {
                             <input type="text" {...register("country")} className="hidden" />
                             <div className="gap-2 step-form-div flex items-center relative overflow-auto" onClick={() => setDropdown(!dropdown)}>
                                 <img src={img} alt="Selected Country Code" />
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                    <path d="M14 8L10 12L6 8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
+                                <img src={dArrow2} alt="Downward Arrow" />
 
                             </div>
                             {

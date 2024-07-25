@@ -19,13 +19,13 @@ function Step1({ swiper, register, watch }) {
         }
     }, [ct, cate, pin])
     return (
-        <div className="flex flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
+        <div className="flex create-popup-slide flex-col justify-between w-[100%] max-h-[100vh] h-[100vh] overflow-y-auto lg:p-[44px] sm:p-8 py-6 px-4">
             <div className="">
-                <div className="flex w-[100%] justify-between items-center h-[30px]">
+                <div className="create-popup-hide flex w-[100%] justify-between items-center h-[30px]">
                     <img src={FormLogo} alt="SendMeHugs Form Logo" />
                     <div className="leading-[30px] text-black font-inter text-[14px] font-bold cursor-pointer" onClick={() => navigate("/fundraising/signin")}>Sign In</div>
                 </div>
-                <div className="pt-[115px] flex flex-col gap-[43px] ">
+                <div className="create-popup-content pt-[115px] flex flex-col gap-[43px] ">
                     <div className="flex flex-col gap-[21px]">
                         <h2 className="text-black font-bold text-[21px] font-inter leading-[65.5%]">Where will the funds go?</h2>
                         <p className="text-[14px] leading-5 font-inter">Choose the location where you plan to withdraw your funds.</p>
