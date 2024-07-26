@@ -123,7 +123,7 @@ function Dashboard({ children, deletePopup, setDeletePopup, navOpen, setNavOpen 
                                 }
                                 {
                                     notification &&
-                                    <div className="absolute top-[calc(100%_+_20px)] -right-[100px]" onClick={(e) => e.stopPropagation()}>
+                                    <div className="absolute top-[calc(100%_+_20px)] -right-[100px] z-[21]" onClick={(e) => e.stopPropagation()}>
                                         <NotificationHover notificationData={notificationData} />
                                     </div>
                                 }
