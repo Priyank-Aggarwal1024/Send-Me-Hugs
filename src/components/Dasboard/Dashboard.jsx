@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { dArrow2, dashAvatar, fundPost1, fundPost2, fundPost3, Notificationbell } from '../../assets';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useOutletContext, useParams } from 'react-router-dom';
 import DeleteFundraiserPopup from '../Popups/DeleteFundraiserPopup';
 import CreateNewPopup from '../Popups/CreateNewPopup';
+import NotificationHover from '../Popups/NotificationHover';
 
 function Dashboard({ children, deletePopup, setDeletePopup, navOpen, setNavOpen }) {
     const data = [
@@ -70,13 +71,16 @@ function Dashboard({ children, deletePopup, setDeletePopup, navOpen, setNavOpen 
             date: "Started 18 July 2024"
         },
     ]
+    const notificationData = useOutletContext()
+    console.log(notificationData)
     const { slug } = useParams();
     const navigate = useNavigate();
     const [createPopup, setCreatePopup] = useState(false);
+    const [notification, setNotification] = useState(false)
 
     return (
         <>
-            <div className="flex h-[100vh]  w-[100%] flex-col">
+            <div className="flex h-[100vh]  w-[100%] flex-col" onClick={() => setNotification(false)}>
                 <div className="pl-[19px] w-[100%] h-[68px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex gap-4">
 
                     <div className="text-center text-black text-[18px] md:text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">
@@ -104,11 +108,27 @@ function Dashboard({ children, deletePopup, setDeletePopup, navOpen, setNavOpen 
                                 </div>
                             </div>
                         </div>
-                        <div className="justify-start items-center gap-5 flex">
-                            <div className="w-6 h-6 relative flex justify-center items-center">
+                        <div className="justify-start items-center gap-5 flex relative">
+                            <div className="w-6 h-6 relative flex justify-center items-center" onClick={(e) => { e.stopPropagation(); setNotification(!notification) }}>
                                 <div className="bg-[#FF3C3C] flex justify-center items-center absolute w-3 h-3 text-[8px] font-inter leading-[5px] text-white top-0.5 -right-0.5 rounded-[50%]">3</div>
                                 <img className="w-6 h-6" src={Notificationbell} alt="Notificationbell" />
+                                {
+                                    notification &&
+
+                                    <div className="absolute top-[100%] z-[20]" onClick={(e) => e.stopPropagation()}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="24" viewBox="0 0 45 24" fill="none">
+                                            <path d="M20.554 1.6585C21.6753 0.702836 23.3247 0.702836 24.446 1.6585L43.5808 17.9667C45.7038 19.7761 44.4243 23.25 41.6349 23.25H3.36514C0.575743 23.25 -0.703795 19.7761 1.41916 17.9668L20.554 1.6585Z" fill="white" />
+                                        </svg>
+                                    </div>
+                                }
+                                {
+                                    notification &&
+                                    <div className="absolute top-[calc(100%_+_20px)] -right-[100px]" onClick={(e) => e.stopPropagation()}>
+                                        <NotificationHover notificationData={notificationData} />
+                                    </div>
+                                }
                             </div>
+
                             <div className="justify-start items-center gap-2 flex">
                                 <div className="text-center md:block hidden text-black text-sm font-medium font-popins leading-normal">James Brown</div>
                                 <div className="w-8 h-8 pr-[3.56px] pb-[1.88px] justify-center items-center flex">

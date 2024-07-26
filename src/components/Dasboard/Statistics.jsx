@@ -3,10 +3,12 @@ import { dArrow2, dashAvatar, Notificationbell, reload, threeDot } from '../../a
 import StatisticsCharts from './StatisticsCharts';
 import WidhdrawPopup from '../Popups/WidhdrawPopup';
 import CreateNewPopup from '../Popups/CreateNewPopup';
+import OptionsPopup from '../Popups/OptionsPopup';
 
 function Statistics({ navOpen, setNavOpen }) {
     const [widhdraw, setWidhdraw] = useState(false)
     const [createPopup, setCreatePopup] = useState(false);
+    const [opt, setOpt] = useState(-1);
 
     return (
         <>
@@ -203,9 +205,12 @@ function Statistics({ navOpen, setNavOpen }) {
                                                         </div>
                                                         <div className="flex items-center justify-between">
                                                             <p className="font-roboto max-w-[77.25px] text-[12px] font-[400]  leading-[18px] text-[#393D42] ">28 May, 2023 04:10</p>
-                                                            <div className="w-5 h-5 relative" >
-                                                                <img src={threeDot} alt="threeDot" />
-
+                                                            <div className="w-5 h-5 relative" onClick={() => { if (opt == item) { setOpt(-1) } else { setOpt(item) } }} >
+                                                                <img className="rotate-90" src={threeDot} alt="threeDot" />
+                                                                {opt == item && <div className="z-[20] absolute -top-[50%] right-[120%]" onClick={(e) => e.stopPropagation()}>
+                                                                    <OptionsPopup />
+                                                                </div>
+                                                                }
                                                             </div>
                                                         </div>
 

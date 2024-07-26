@@ -17,7 +17,7 @@ function SideNav({ navOpen, setNavOpen }) {
     }
     console.log(navOpen)
     return (
-        <div className={`w-[260px] top-0 z-[50] min-h-[100vh] pb-5 bg-white border-r border-[#d0d0d0] flex-col justify-start items-start gap-[22px] ${navOpen ? "left-0 absolute" : "-left-[100%] md:static absolute"}`} >
+        <div className={`w-[260px] top-0 z-[50] min-h-[100vh] pb-5 bg-white border-r border-[#d0d0d0] flex-col justify-start items-start gap-[22px] duration-300 ${navOpen ? "left-0 absolute" : "md:left-0 -left-[100%] md:static absolute"}`} >
             <div className="self-stretch h-[68px] px-4 py-5 border-b border-[#d0d0d0] items-start gap-2.5 flex justify-between" >
                 <img src={FormLogo} alt="Image Fund" />
                 <img src={cross} alt="Close Nav" className="md:hidden" onClick={() => setNavOpen(false)} />

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { dArrow2, dashAvatar, Notificationbell, reload, threeDot } from '../../assets';
-
+import OptionsPopup from '../Popups/OptionsPopup';
 function Transfers({ navOpen, setNavOpen }) {
+    const [opt, setOpt] = useState(-1);
 
     return (
         <div className="flex h-[100vh]  w-[100%] flex-col">
@@ -43,7 +44,7 @@ function Transfers({ navOpen, setNavOpen }) {
             <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex p-4">
                 <div className=" w-[100%] flex-col justify-start items-start gap-5 flex">
                     <div className="flex w-full py-5 px-3 gap-5 flex-col bg-white rounded-lg border border-[#d0d0d0] ">
-                        <div className="flex justify-between w-[100%]">
+                        <div className="flex justify-between w-[100%] flex-wrap">
                             <div className="flex gap-2 items-center">
                                 <h2 className="text-black text-[20px] font-[600] leading-6 font-inter">Transaction history</h2>
                                 <img src={reload} alt="Reload" />
@@ -57,7 +58,7 @@ function Transfers({ navOpen, setNavOpen }) {
                             </div>
                         </div>
                         <div className="flex flex-col gap-3">
-                            <div className="grid grid-cols-5 py-3 border-y border-[#BABDC1]">
+                            <div className="grid md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 py-3 border-y border-[#BABDC1]">
                                 <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Transaction</p>
                                 <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Withdrawal Amount</p>
                                 <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Fundraising</p>
@@ -68,7 +69,7 @@ function Transfers({ navOpen, setNavOpen }) {
                                 {
                                     [1, 2, 3, 4, 5, 6].map((item) => {
                                         return (
-                                            <div key={item} className="grid grid-cols-5 h-[36px] items-center pb-1.5 border-b border-[#BABDC1]">
+                                            <div key={item} className="grid  md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 md:h-[36px] items-center pb-1.5 border-b border-[#BABDC1]">
                                                 <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] "># 20315</p>
                                                 <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">$242</p>
                                                 <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">Name 1</p>
@@ -76,10 +77,13 @@ function Transfers({ navOpen, setNavOpen }) {
                                                     <p className="font-roboto w-fit text-[12px] font-[500]  leading-[18px] text-[#fff] py-0.5 px-1.5 rounded-3xl bg-[#10A363] ">Done</p>
                                                 </div>
                                                 <div className="flex items-center justify-between">
-                                                    <p className="font-roboto max-w-[77.25px] text-[12px] font-[400]  leading-[18px] text-[#393D42] ">28 May, 2023 04:10</p>
-                                                    <div className="w-5 h-5 relative" >
-                                                        <img src={threeDot} alt="threeDot" />
-
+                                                    <p className="font-roboto md:max-w-[77.25px] text-[12px] font-[400]  leading-[18px] text-[#393D42] ">28 May, 2023 04:10</p>
+                                                    <div className="w-5 h-5 relative" onClick={() => { if (opt == item) { setOpt(-1) } else { setOpt(item) } }} >
+                                                        <img className="rotate-90" src={threeDot} alt="threeDot" />
+                                                        {opt == item && <div className="z-[20] absolute -top-[50%] right-[120%]" onClick={(e) => e.stopPropagation()}>
+                                                            <OptionsPopup />
+                                                        </div>
+                                                        }
                                                     </div>
                                                 </div>
 

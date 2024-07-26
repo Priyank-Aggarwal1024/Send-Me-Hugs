@@ -12,7 +12,7 @@ function WidhdrawPopup({ widhdraw, setWidhdraw }) {
         <div className="popup-animation max-w-[666px] w-[90%] min-h-[350px] p-5 bg-white flex-col justify-start items-end gap-[43px] inline-flex">
             <div className="self-stretch h-[49px] flex-col justify-start items-start gap-5 flex">
                 <div className="self-stretch justify-between items-start inline-flex">
-                    <div className="opacity-90 text-center text-[#112230] text-xl font-bold font-['Inter'] leading-7">Withdraw funds</div>
+                    <div className="opacity-90 text-center text-[#112230] text-xl font-bold font-inter leading-7">Withdraw funds</div>
                     <div className="w-6 h-6 relative" onClick={() => setWidhdraw(!widhdraw)}>
                         <img src={cross} alt="Cancel" />
                     </div>
@@ -20,7 +20,7 @@ function WidhdrawPopup({ widhdraw, setWidhdraw }) {
                 <div className="self-stretch h-px bg-[#d9d9d9]" />
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="self-stretch h-[218px] flex-col justify-start items-start flex">
-                <div className="self-stretch opacity-90 text-center text-[#112230] text-base font-semibold font-['Inter'] leading-7">Withdraw funds for ‘’Help homeless people” fundraising</div>
+                <div className="self-stretch opacity-90 text-center text-[#112230] text-base font-semibold font-inter leading-7">Withdraw funds for ‘’Help homeless people” fundraising</div>
                 <div className="self-stretch h-[190px] py-[17px] flex-col justify-start items-center gap-11 flex">
                     <div className="self-stretch h-[76px] flex-col justify-start items-center gap-3 flex">
                         <div className="h-10 flex-col justify-start items-start gap-2 flex">

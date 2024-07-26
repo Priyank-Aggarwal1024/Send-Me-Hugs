@@ -9,7 +9,7 @@ function DeleteFundraiserPopup({ deletePopup, setDeletePopup }) {
             </div>
             <div className="self-stretch h-[174px] py-[17px] flex-col justify-start items-center gap-11 flex">
                 <div className="self-stretch h-[60px] flex-col justify-start items-center gap-3 flex">
-                    <div className="self-stretch opacity-90 text-center text-[#112230] text-xl font-bold font-['Inter'] leading-7">Are you sure you want to delete this fundraising?</div>
+                    <div className="self-stretch opacity-90 text-center text-[#112230] text-xl font-bold font-inter leading-7">Are you sure you want to delete this fundraising?</div>
                     <div className="self-stretch text-center text-[#6d6d6d] text-sm font-normal font-roboto leading-tight">All your data according this fundraising will be deleted</div>
                 </div>
                 <div className="self-stretch justify-center items-start gap-3 inline-flex">

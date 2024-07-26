@@ -14,12 +14,12 @@ function FundraiserIten({ deletePopup, setDeletePopup }) {
         <>
             <div className="justify-start overflow-auto flex-col  w-[100%] items-start gap-1 inline-flex p-4">
                 <div className="pb-[14px]">
-                    <div className="py-1.5 px-2 flex justify-center items-center gap-1 rounded-[36px] text-[#298D7C] text-center font-popins text-[14px] leading-6 font-[500]">
+                    <Link to="/dashboard" className="py-1.5 px-2 flex justify-center items-center gap-1 rounded-[36px] text-[#298D7C] text-center font-popins text-[14px] leading-6 font-[500]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <path d="M12.8002 7.99981L3.2002 7.9998M3.2002 7.9998L6.59431 11.1998M3.2002 7.9998L6.59431 4.7998" stroke="#298D7C" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                        <Link to="/dashboard">Back to fundraisers</Link>
-                    </div>
+                        <p>Back to fundraisers</p>
+                    </Link>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="max-w-[793px] w-[100%] p-5 bg-white rounded-lg border border-[#d0d0d0] flex-col justify-start items-start gap-5 inline-flex">
                     <div className="self-stretch h-[392px] rounded-lg flex-col justify-center items-center gap-3 flex">
@@ -70,7 +70,7 @@ function FundraiserIten({ deletePopup, setDeletePopup }) {
                         <div className="w-5 h-5 relative" />
                     </div>
                     <div className="self-stretch justify-between items-center inline-flex">
-                        <div className="text-[#6d6d6d] text-sm font-normal font-['Roboto'] leading-tight">NOTE: All your data according this fundraising ...</div>
+                        <div className="text-[#6d6d6d] text-sm font-normal font-roboto leading-tight">NOTE: All your data according this fundraising ...</div>
                         <div className="px-2 py-1.5 rounded-[36px] border-2 cursor-pointer border-[#ff4f49] justify-center items-center gap-1 flex" onClick={() => setDeletePopup(!deletePopup)}>
                             <div className="px-1 justify-start items-start gap-2.5 flex">
                                 <div className="text-center text-[#ff4f49] text-sm font-medium font-['Poppins'] leading-normal">Delete</div>

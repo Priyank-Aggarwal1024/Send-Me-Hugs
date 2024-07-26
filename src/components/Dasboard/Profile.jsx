@@ -117,7 +117,7 @@ function Profile({ navOpen, setNavOpen }) {
                         </div>
                         <div className="flex max-w-[724px] w-full p-5 flex-col  border rounded-lg border-[#D0D0D0] bg-white gap-5">
                             <div className="self-stretch h-[116px] flex-col justify-start items-start gap-6 flex">
-                                <div className="text-center text-[#2c2f32] text-xl font-semibold font-['Inter'] leading-7">Wallet Address</div>
+                                <div className="text-center text-[#2c2f32] text-xl font-semibold font-inter leading-7">Wallet Address</div>
                                 <div className="self-stretch h-16 pl-3 flex-col justify-start items-start gap-11 flex">
                                     <div className="w-[100%] h-[64px] step-form-div flex justify-end flex-col relative">
                                         <input type="text" {...register("w-address", { required: "Field is requiered" })} id="w-address" className="step-form-input" placeholder="305102d93353a9e0b7664382dd84f087858199a0" />
@@ -135,7 +135,7 @@ function Profile({ navOpen, setNavOpen }) {
                         </div>
                         <div className="flex max-w-[724px] w-full p-5 flex-col  border rounded-lg border-[#D0D0D0] bg-white gap-5">
                             <div className="self-stretch h-[116px] flex-col justify-start items-start gap-6 flex">
-                                <div className="text-center text-[#2c2f32] text-xl font-semibold font-['Inter'] leading-7">Password</div>
+                                <div className="text-center text-[#2c2f32] text-xl font-semibold font-inter leading-7">Password</div>
                                 <div className="self-stretch h-16 pl-3 flex-col justify-start items-start gap-11 flex">
                                     <div className="w-[100%] max-w-[306px] h-[64px] step-form-div flex justify-end flex-col relative">
                                         <input type="password" {...register("password", { required: "Field is requiered" })} id="password" className="step-form-input" placeholder=".........." />
