@@ -32,7 +32,7 @@ function Help(props) {
             user: "User"
         },
     ]
-
+    let perc = 75;
     return (
         <div className={`w-[100%] bg-dark-cyan  relative`}>
             <div className="faq-background-circle-design">
@@ -41,7 +41,6 @@ function Help(props) {
             <div className="background-circle-design1 faq-design1"></div>
             <Navbar navOpen={navOpen} setNavOpen={setNavOpen} />
             <div className="flex gap-2.5 md:gap-[21px] bg-white h-fit flex-col md:flex-row justify-between items-center py-1.5 xl:h-[70px] 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] 2xl:hidden relative z-[2]">
-
                 <div className="flex  w-[100%] md:w-auto gap-[8px] items-center xss:justify-center xss:flex-wrap ">
                     <div className="flex xss:gap-2 gap-[18px] items-center  xss:flex-wrap justify-center">
                         <div className="flex text-black items-center">
@@ -58,11 +57,24 @@ function Help(props) {
                             <div className="font-inter text-[14px] font-[500] xss:pl-2 pl-[17px]">$25,000.00 </div>
                         </div>
                     </div>
-                    <img className="h-[100%] mx-auto" src={graph} alt="Graph 75%" />
+                    <div className="graph-loader3 2xl:hidden ">
+                        <div className="graph-outer3">
+                            <div className="graph-inner3">
+                                <div className="graph-number3">{perc}%</div>
+                            </div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 54 54" fill="none">
 
+                            <linearGradient id="paint0_linear_1_13063" x1="29.1252" y1="56.8032" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                                <stop stopColor="#33A4E3" />
+                                <stop offset="1" stopColor="#50D35D" />
+                            </linearGradient>
+                            <circle cx="27" cy="27" r="24" fill="#143034" strokeLinecap="round" strokeDasharray={450} strokeDashoffset={450 - (1.5 * perc)} />
+
+                        </svg>
+                    </div>
                 </div>
                 <button className="bg-gradient-cyan bg-gradient-cyan-hover font-popins text-[16px] p-[10px_14px] rounded-[36px] h-fit md:w-[143px] w-full text-white">Donate</button>
-
             </div>
             <div className="relative z-[2] mx-auto text-white 2xl:px-[156px] lg:px-[32px] xl:px-[96px] px-[16px] pt-3">
 
@@ -96,7 +108,22 @@ function Help(props) {
                                                 </svg>
                                                 <div className="font-inter text-[16px] sm:text-[20px] font-[500]">$25,000.00 </div>
                                             </div>
-                                            <img src={graph2} alt="2nd Graph" />
+                                            <div className="graph-loader">
+                                                <div className="graph-outer">
+                                                    <div className="graph-inner">
+                                                        <div className="graph-number">{perc}%</div>
+                                                    </div>
+                                                </div>
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 54 54" fill="none">
+
+                                                    <linearGradient id="paint0_linear_1_11420" x1="28.5186" y1="54.4639" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                                                        <stop stopColor="#33A4E3" />
+                                                        <stop offset="1" stopColor="#50D35D" />
+                                                    </linearGradient>
+                                                    <circle cx="27" cy="27" r="24" fill="#143034" strokeLinecap="round" strokeDasharray={450} strokeDashoffset={450 - (1.5 * perc)} />
+
+                                                </svg>
+                                            </div>
                                         </div>
                                         <div className="font-inter text-[14px] font-[500] h-[42px] flex md:justify-center items-center gap-5">
                                             <p>Share</p>
@@ -163,7 +190,21 @@ function Help(props) {
                         </div>
                         <div className="2xl:flex flex-col gap-[21px] bg-white w-[387px] h-fit hidden py-5 px-4">
                             <p className="border-b border-primary-500 text-primary-500 font-inter text-[16px] font-[400] leading-6 w-fit mx-auto">207 supporters</p>
-                            <img className="w-[158px] mx-auto" src={graph3} alt="Graph 75%" />
+                            <div className="graph-loader2 mx-auto">
+                                <div className="graph-outer2">
+                                    <div className="graph-inner2">
+                                        <div className="graph-number2">{perc}%</div>
+                                    </div>
+                                </div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="153" height="153" viewBox="0 0 159 158" fill="none">
+                                    <linearGradient id="paint0_linear_1_11377" x1="79.8426" y1="154.74" x2="0" y2="0" gradientUnits="userSpaceOnUse">
+                                        <stop stopColor="#33A4E3" />
+                                        <stop offset="1" stopColor="#50D35D" />
+                                    </linearGradient>
+
+                                    <circle cx="79" cy="79" r="71" fill="#D8E3E4" fillOpacity="0.62" strokeDasharray={500} strokeDashoffset={500 - (4.4 * perc)} strokeLinecap="round" />
+                                </svg>
+                            </div>
                             <div className="flex gap-[18px] mx-auto">
                                 <div className="flex text-black">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">

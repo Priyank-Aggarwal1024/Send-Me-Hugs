@@ -302,6 +302,168 @@ button.bg-gradient-cyan-hover:hover {
   z-index: 101;
 }
 
+.graph-loader {
+  width: 56px;
+  height: 56px;
+  background-color: #143034;
+  position: relative;
+  padding: 2px;
+  /* overflow: visible; */
+  border-radius: 50%;
+}
+
+.graph-loader circle {
+  fill: none;
+  stroke: url(#paint0_linear_1_11420);
+  stroke-width: 4px;
+  width: 52px;
+  height: 52px;
+  stroke-linecap: round;
+}
+
+.graph-loader svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  rotate: -315deg;
+  transform-origin: 0 0;
+}
+
+
+.graph-outer {
+  width: 54px;
+  height: 54px;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.graph-inner {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-number {
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.graph-loader2 {
+  width: 158px;
+  height: 158px;
+  background-color: #D8E3E4;
+  position: relative;
+  padding: 5px;
+  /* overflow: visible; */
+  border-radius: 50%;
+}
+
+.graph-loader2 circle {
+  fill: none;
+  stroke: url(#paint0_linear_1_11377);
+  stroke-width: 13px;
+  width: 148px;
+  height: 148px;
+  stroke-linecap: round;
+}
+
+.graph-loader2 svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  rotate: -315deg;
+  transform-origin: 0 0;
+}
+
+
+.graph-outer2 {
+  width: 148px;
+  height: 148px;
+  padding: 13px;
+  border-radius: 50%;
+}
+
+.graph-inner2 {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-number2 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.graph-loader3 {
+  width: 56px;
+  height: 56px;
+  background-color: #D8E3E4;
+  position: relative;
+  padding: 2px;
+  /* overflow: visible; */
+  border-radius: 50%;
+}
+
+.graph-loader3 circle {
+  fill: none;
+  stroke: url(#paint0_linear_1_13063);
+  stroke-width: 4px;
+  width: 52px;
+  height: 52px;
+  stroke-linecap: round;
+}
+
+.graph-loader3 svg {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  rotate: -315deg;
+  transform-origin: 0 0;
+}
+
+
+.graph-outer3 {
+  width: 54px;
+  height: 54px;
+  padding: 4px;
+  border-radius: 50%;
+}
+
+.graph-inner3 {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.graph-number3 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 @keyframes popup {
   0% {
     opacity: 0;
