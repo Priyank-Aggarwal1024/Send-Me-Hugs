@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { dArrow2, dashAvatar, Notificationbell, reload, threeDot } from '../../assets';
+import { darrow, dArrow2, dashAvatar, Notificationbell, reload, threeDot } from '../../assets';
 import StatisticsCharts from './StatisticsCharts';
 import WidhdrawPopup from '../Popups/WidhdrawPopup';
 import CreateNewPopup from '../Popups/CreateNewPopup';
@@ -84,19 +84,23 @@ function Statistics({ navOpen, setNavOpen }) {
                 <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex p-4">
                     <div className=" w-[100%] flex-col justify-start items-start gap-5 inline-flex">
                         <div className="self-stretch pl-5 pr-2.5 py-2.5 bg-white rounded-lg border border-[#d0d0d0] justify-between items-center inline-flex">
-                            <div className="justify-start items-center gap-2 flex">
-                                <div className="text-[#4c545b] text-[11px] font-medium font-inter uppercase leading-tight">Sort by</div>
-                                <div className="px-1.5 py-0.5 bg-neutral-100 rounded-3xl justify-center items-center gap-1.5 flex">
-                                    <div className="w-4 h-4 relative" />
-                                    <div className="text-center text-neutral-700 text-xs font-medium font-inter leading-tight">Amount raised</div>
-                                    <div className="w-4 h-4 relative" />
+                            <div className="h-9 px-3 py-2 bg-white rounded border border-[#babdc1] justify-start items-start gap-3 inline-flex max-w-[353px] w-full">
+                                <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
+                                    <div className="justify-start items-center gap-0.5 flex">
+                                        <div className="text-[#2c2f32] text-sm font-normal font-['Roboto'] leading-tight">Help homeless people</div>
+                                    </div>
+                                </div>
+                                <div className="justify-end items-center gap-1 flex">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14 8L10 12L6 8" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                    </svg>
                                 </div>
                             </div>
-                            <div className="h-9 px-2 cursor-pointer py-1.5 bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex " onClick={() => setCreatePopup(!createPopup)}>
+                            <div className="h-9 px-2 py-1.5 cursor-pointer bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex" onClick={() => setCreatePopup(!createPopup)}>
                                 <div className="px-1 justify-start items-start gap-2.5 flex">
-                                    <div className="text-center text-white text-sm font-medium font-popins leading-normal">Create New <span className="pl-1">+</span></div>
+                                    <div className="text-center text-white text-sm font-medium font-popins leading-normal">Create New </div>
                                 </div>
-                                <div className="w-4 h-4 relative" />
+                                <span className="pl-1text-center text-white text-sm font-medium font-popins leading-normal">+</span>
                             </div>
                         </div>
                         <div className="flex flex-col w-full gap-5" >

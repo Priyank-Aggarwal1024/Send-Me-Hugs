@@ -47,17 +47,17 @@ function Navbar({ navOpen, setNavOpen }) {
                                 <h4 className="font-inter text-[14px] text-white font-bold leading-6 px-[9px]">Discover</h4>
                                 <div className="w-[100%]">
                                     <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Fundrasiers</Link>
-                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Success Stories</Link>
+                                    <Link to="/dashboard" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Success Stories</Link>
                                     <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Social impact Funds</Link>
                                 </div>
                             </div>
                             <div className="flex flex-col gap-2 items-start col-span-1 " >
                                 <h4 className="font-inter text-[14px] text-white  font-bold leading-6 px-[9px]">Fundraise for</h4>
                                 <div className="w-[100%]">
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Medical</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Emergency</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Nonprofit</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Medical</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Emergency</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Nonprofit</Link>
                                 </div>
                             </div>
                         </div>
@@ -71,7 +71,7 @@ function Navbar({ navOpen, setNavOpen }) {
                                 <h4 className="font-inter text-[14px] text-white font-bold leading-6 px-[9px]">Discover</h4>
                                 <div className="w-[100%]">
                                     <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Fundrasiers</Link>
-                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Success Stories</Link>
+                                    <Link to="/dashboard" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Success Stories</Link>
                                     <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Social impact Funds</Link>
                                 </div>
                             </div>
@@ -117,8 +117,8 @@ function Navbar({ navOpen, setNavOpen }) {
                             <div className="flex flex-col gap-2 items-start col-span-1 " >
                                 <h4 className="font-inter text-[14px] text-white  font-bold leading-6 px-[9px]">Fundraise for</h4>
                                 <div className="w-[100%]">
-                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Medical</Link>
-                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
+                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Medical</Link>
+                                    <Link to="/dashboard" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
                                     <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Emergency</Link>
                                     <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Nonprofit</Link>
                                 </div>
@@ -136,9 +136,9 @@ function Navbar({ navOpen, setNavOpen }) {
                                 <h4 className="font-inter text-[14px] text-white  font-bold leading-6 px-[9px]">Fundraise for</h4>
                                 <div className="w-[100%]">
                                     <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Medical</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Emergency</Link>
-                                    <Link to="/fundraising" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Nonprofit</Link>
+                                    <Link to="/dashboard" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Memorial</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Emergency</Link>
+                                    <Link to="/" className="font-inter text-[14px] font-[400] leading-6 text-white flex items-center p-2 hover:bg-[#1A3C46] ">Nonprofit</Link>
                                 </div>
                             </div>
                         </div>

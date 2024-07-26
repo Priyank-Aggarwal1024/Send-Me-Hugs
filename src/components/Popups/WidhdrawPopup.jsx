@@ -23,7 +23,7 @@ function WidhdrawPopup({ widhdraw, setWidhdraw }) {
                 <div className="self-stretch opacity-90 text-center text-[#112230] text-base font-semibold font-inter leading-7">Withdraw funds for ‘’Help homeless people” fundraising</div>
                 <div className="self-stretch h-[190px] py-[17px] flex-col justify-start items-center gap-11 flex">
                     <div className="self-stretch h-[76px] flex-col justify-start items-center gap-3 flex">
-                        <div className="h-10 flex-col justify-start items-start gap-2 flex">
+                        <div className="h-10 max-w-[394px] w-full flex-col justify-start items-start gap-2 flex">
                             <div className="self-stretch h-10 flex-col justify-start items-start gap-1 flex">
                                 <div className="self-stretch py-2.5 bg-white border-b border-[#d0d2d5] justify-start items-start gap-3 inline-flex">
                                     <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
