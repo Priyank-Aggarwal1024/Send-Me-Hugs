@@ -9,7 +9,7 @@ function EditPasswordPopup({ editPassword, setEditPassword }) {
     }
     console.log(errors)
     return (
-        <div className="max-w-[463px] w-[90%] popup-animation max-h-[90%] items-center p-5 bg-white flex-col justify-start gap-[43px] inline-flex">
+        <div className="max-w-[463px] w-[90%] popup-animation max-h-[90%] items-center p-5 bg-white flex-col justify-start sm:gap-[30px] inline-flex">
             <div className="self-stretch h-[49px] flex-col justify-start items-start gap-5 flex">
                 <div className="self-stretch justify-between items-start inline-flex">
                     <div className="opacity-90 text-center text-[#112230] text-xl font-bold font-inter leading-7">Edit password</div>

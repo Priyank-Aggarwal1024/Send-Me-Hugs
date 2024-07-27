@@ -6,7 +6,6 @@ import { Admin, Dasboard, FundraiserIten, FundraisingSignIn, Notifications, Prof
 
 function App() {
   const [deletePopup, setDeletePopup] = useState(false)
-  const [navOpen, setNavOpen] = useState(false)
 
   return (
     <>
@@ -24,17 +23,17 @@ function App() {
             <Route path='/fundraising' element={<FundraisingForm />} />
             <Route path='/fundraising/signin' element={<FundraisingSignIn />} />
             <Route path="/phone-verification" element={<PhoneVerification />} />
-            <Route path='/' element={<Admin navOpen={navOpen} setNavOpen={setNavOpen} />}>
-              <Route path='dashboard' element={<Dasboard navOpen={navOpen} setNavOpen={setNavOpen} />} />
+            <Route path='/' element={<Admin />}>
+              <Route path='dashboard' element={<Dasboard />} />
               <Route path='dashboard/:slug' element={<>
-                <Dasboard deletePopup={deletePopup} setDeletePopup={setDeletePopup} navOpen={navOpen} setNavOpen={setNavOpen} >
+                <Dasboard deletePopup={deletePopup} setDeletePopup={setDeletePopup} >
                   <FundraiserIten deletePopup={deletePopup} setDeletePopup={setDeletePopup} />
                 </Dasboard>
               </>} />
-              <Route path="notifications" element={<Notifications navOpen={navOpen} setNavOpen={setNavOpen} />} />
-              <Route path="transfers" element={<Transfers navOpen={navOpen} setNavOpen={setNavOpen} />} />
-              <Route path="profile" element={<Profile navOpen={navOpen} setNavOpen={setNavOpen} />} />
-              <Route path="statistics" element={<Statistics navOpen={navOpen} setNavOpen={setNavOpen} />} />
+              <Route path="notifications" element={<Notifications />} />
+              <Route path="transfers" element={<Transfers />} />
+              <Route path="profile" element={<Profile />} />
+              <Route path="statistics" element={<Statistics />} />
             </Route>
           </Routes>
         </BrowserRouter>

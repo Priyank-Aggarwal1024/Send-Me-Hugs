@@ -7,7 +7,7 @@ import OptionsPopup from '../Popups/OptionsPopup';
 import NotificationHover from '../Popups/NotificationHover';
 import { useOutletContext } from 'react-router-dom';
 
-function Statistics({ navOpen, setNavOpen }) {
+function Statistics(props) {
     const [widhdraw, setWidhdraw] = useState(false)
     const [createPopup, setCreatePopup] = useState(false);
     const [opt, setOpt] = useState(-1);
@@ -16,20 +16,12 @@ function Statistics({ navOpen, setNavOpen }) {
 
     return (
         <>
-            <div className="flex h-[100vh]  w-[100%] flex-col" onClick={() => setNotification(false)}>
-                <div className="pl-[19px] w-[100%] h-[68px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex gap-4">
-                    <div className="text-center text-black text-[18px] md:text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">
-                        <div className="md:hidden" onClick={() => setNavOpen(true)}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                <path d="M16.7083 9.16667H3.29167C2.85444 9.16667 2.5 9.52111 2.5 9.95833V10.0417C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0417V9.95833C17.5 9.52111 17.1456 9.16667 16.7083 9.16667Z" fill="black" />
-                                <path d="M16.7083 13.3333H3.29167C2.85444 13.3333 2.5 13.6878 2.5 14.125V14.2083C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2083V14.125C17.5 13.6878 17.1456 13.3333 16.7083 13.3333Z" fill="black" />
-                                <path d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z" fill="black" />
-                            </svg>
-                        </div>
-                        <h2>Dashboard</h2>
-                    </div>
+            <div className="flex h-[100vh]  xlg:w-[calc(100vw_-_260px)] w-[calc(100vw_-_60px)] flex-col" onClick={() => setNotification(false)}>
+                <div className="pl-[19px] w-[100%] xlg:h-[68px] h-[56px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex gap-4">
+
+                    <h2 className="text-center text-black text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">Statistics</h2>
                     <div className="justify-end items-center gap-5 flex">
-                        <div className="justify-start md:flex items-center gap-[25px] hidden">
+                        <div className="justify-start xlg:flex items-center gap-[25px] hidden">
                             <div className="xl:w-[375px] w-[100%] h-11 px-3 py-2.5 bg-white rounded border border-[#babdc1] justify-start items-center gap-3 flex">
                                 <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
                                     <div className="w-5 h-5 relative" >
@@ -81,10 +73,10 @@ function Statistics({ navOpen, setNavOpen }) {
                         </div>
                     </div>
                 </div>
-                <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex p-4">
-                    <div className=" w-[100%] flex-col justify-start items-start gap-5 inline-flex">
-                        <div className="self-stretch pl-5 pr-2.5 py-2.5 bg-white rounded-lg border border-[#d0d0d0] justify-between items-center inline-flex">
-                            <div className="h-9 px-3 py-2 bg-white rounded border border-[#babdc1] justify-start items-start gap-3 inline-flex max-w-[353px] w-full">
+                <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex xlg:p-4 md:p-3 p-2.5">
+                    <div className=" w-[100%] flex-col justify-start items-start gap-3 xlg:gap-5 inline-flex">
+                        <div className="self-stretch pl-2.5 gap-2.5 xlg:pl-5 pr-2.5 py-2.5 bg-white rounded-lg border border-[#d0d0d0] justify-between items-center inline-flex">
+                            <div className="h-9 px-3 py-2 bg-white rounded border border-[#babdc1] justify-start items-start gap-3 inline-flex md:max-w-[353px] w-full">
                                 <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
                                     <div className="justify-start items-center gap-0.5 flex">
                                         <div className="text-[#2c2f32] text-sm font-normal font-['Roboto'] leading-tight">Help homeless people</div>
@@ -96,15 +88,17 @@ function Statistics({ navOpen, setNavOpen }) {
                                     </svg>
                                 </div>
                             </div>
-                            <div className="h-9 px-2 py-1.5 cursor-pointer bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex" onClick={() => setCreatePopup(!createPopup)}>
-                                <div className="px-1 justify-start items-start gap-2.5 flex">
+                            <div className="h-8 md:h-9 px-2 py-1.5 cursor-pointer bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex" onClick={() => setCreatePopup(!createPopup)}>
+                                <div className="px-1 justify-start items-start hidden gap-2.5 md:flex">
                                     <div className="text-center text-white text-sm font-medium font-popins leading-normal">Create New </div>
                                 </div>
-                                <span className="pl-1text-center text-white text-sm font-medium font-popins leading-normal">+</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7.99967 3.33398V12.6673M12.6663 8.00065H3.33301" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                                </svg>
                             </div>
                         </div>
-                        <div className="flex flex-col w-full gap-5" >
-                            <div className="flex xl:flex-row flex-col w-[100%] gap-5">
+                        <div className="flex flex-col gap-3 xlg:gap-5 w-full" >
+                            <div className="flex xl:flex-row flex-col w-[100%] gap-3 xlg:gap-5 ">
                                 <div className="chart-div flex p-5 flex-col gap-6 lg:max-w-[685px] w-full bg-white rounded-lg border border-[#D0D0D0] ">
                                     <div className="flex justify-between items-center">
                                         <div className="flex gap-2 items-center">
@@ -113,12 +107,12 @@ function Statistics({ navOpen, setNavOpen }) {
                                         </div>
                                         <img src={threeDot} alt="threeDot" />
                                     </div>
-                                    <div className="flex w-[100%] justify-between  items-end">
-                                        <div className="flex flex-col gap-[5px]">
-                                            <p className="font-inter text-[14px] font-[500] leading-6">General income</p>
+                                    <div className="flex w-[100%] justify-between md:flex-row flex-col">
+                                        <div className="flex md:flex-col flex-row gap-[5px] md:justify-start justify-between">
+                                            <p className="font-inter text-[14px] font-[500] leading-6"><span className="hidden xlg:inline">General income</span><span className="xlg:hidden">Income</span> </p>
                                             <h1 className="font-inter md:text-[30px] text-[20px] font-[600] leading-6">$ 63,589.02</h1>
                                         </div>
-                                        <div className="flex">
+                                        <div className="flex md:self-end">
                                             <select name="duration" id="duration" className="outline-none py-2 px-3 border border-black rounded-[4px]">
                                                 <option value="week" className=" py-2 px-3 " >This Week</option>
                                                 <option value="week" className=" py-2 px-3 " >This Month</option>
@@ -148,10 +142,10 @@ function Statistics({ navOpen, setNavOpen }) {
                                         <div className="self-stretch h-[60px] flex-col justify-end items-center flex">
                                             <div className="self-stretch justify-between items-end inline-flex">
                                                 <div className="flex-col justify-start items-start gap-[5px] inline-flex">
-                                                    <div className="text-center text-black text-3xl font-semibold font-inter leading-normal">$ 63,589.02</div>
+                                                    <div className="text-center text-black md:text-[30px] text-[20px] font-semibold font-inter leading-normal">$ 63,589.02</div>
                                                 </div>
                                             </div>
-                                            <div className="self-stretch justify-between items-center inline-flex">
+                                            <div className="self-stretch gap-3 sm:justify-between sm:items-center sm:flex-row flex-col inline-flex">
                                                 <div className="text-[#838383] text-sm font-medium font-inter leading-normal">18 July 2024</div>
                                                 <div className="px-2 py-1.5 bg-[#e5f8f4]/70 rounded-[36px] border-2 border-[#288d7c] justify-center items-center gap-1 flex">
                                                     <div className="px-1 justify-start cursor-pointer items-start gap-2.5 flex" onClick={() => setWidhdraw(!widhdraw)}>
@@ -182,7 +176,7 @@ function Statistics({ navOpen, setNavOpen }) {
                                             </div>
                                             <div className="self-stretch justify-between items-end inline-flex">
                                                 <div className="flex-col justify-start items-start gap-[5px] inline-flex">
-                                                    <div className="text-center text-black text-3xl font-semibold font-inter leading-normal">$ 1,589.02</div>
+                                                    <div className="text-center text-black md:text-[30px] text-[20px] font-semibold font-inter leading-normal">$ 1,589.02</div>
                                                 </div>
                                             </div>
 
@@ -190,61 +184,67 @@ function Statistics({ navOpen, setNavOpen }) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="flex py-5 px-3 gap-5 flex-col bg-white rounded-lg border border-[#d0d0d0] ">
+                            <div className="flex py-5 px-3 gap-3 xlg:gap-5 flex-col w-full bg-white rounded-lg border border-[#d0d0d0] ">
                                 <div className="flex justify-between w-[100%]">
-                                    <div className="flex gap-2 items-center">
-                                        <h2 className="text-black text-[20px] font-[600] leading-6 font-inter">General income</h2>
-                                        <img src={reload} alt="Reload" />
-                                    </div>
-                                    <div className="flex gap-3 items-center">
-                                        <select name="donation-duration" id="donation-duration" className="outline-none py-2 px-3 border border-black rounded-[4px]">
-                                            <option value="week" className=" py-2 px-3 " >This Week</option>
-                                            <option value="week" className=" py-2 px-3 " >This Month</option>
-                                            <option value="week" className=" py-2 px-3 " >This Year</option>
-                                        </select>
-                                        <div className="w-5 h-5 relative" >
-                                            <img src={threeDot} alt="threeDot" />
+                                    <div className="flex justify-between w-[100%] flex-wrap gap-2.5">
+                                        <div className="flex gap-2 items-center">
+                                            <h2 className="text-black text-[20px] font-[600] leading-6 font-inter">Download History</h2>
+                                            <img src={reload} alt="Reload" />
+                                        </div>
+                                        <div className="flex gap-3 items-center">
+                                            <select name="donation-duration" id="donation-duration" className="outline-none py-2 px-3 text-[14px] leading-5 border border-black rounded-[4px]">
+                                                <option value="week" className=" py-2 px-3 " >This Week</option>
+                                                <option value="week" className=" py-2 px-3 " >This Month</option>
+                                                <option value="week" className=" py-2 px-3 " >This Year</option>
+                                            </select>
+
                                         </div>
                                     </div>
+                                    <div className="w-5 h-[41px] place-items-center grid relative" >
+                                        <img src={threeDot} alt="threeDot" />
+                                    </div>
                                 </div>
-                                <div className="flex flex-col gap-3">
-                                    <div className="grid md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 py-3 border-y border-[#BABDC1]">
-                                        <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Transaction</p>
-                                        <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Amount</p>
-                                        <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Fundraising</p>
-                                        <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Status</p>
-                                        <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Date</p>
-                                    </div>
-                                    <div className="flex flex-col gap-1">
-                                        {
-                                            [1, 2, 3, 4, 5, 6].map((item) => {
-                                                return (
-                                                    <div key={item} className="grid  md:grid-cols-5 md:grid-rows-1 grid-cols-1 grid-rows-5 md:h-[36px] items-center pb-1.5 border-b border-[#BABDC1]">
-                                                        <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">Noel StudNoel Studerer</p>
-                                                        <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">$242</p>
-                                                        <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">Name 1</p>
-                                                        <div className="">
-                                                            <p className="font-roboto w-fit text-[12px] font-[500]  leading-[18px] text-[#fff] py-0.5 px-1.5 rounded-3xl bg-[#10A363] ">Received</p>
-                                                        </div>
-                                                        <div className="flex items-center justify-between">
-                                                            <p className="font-roboto max-w-[77.25px] text-[12px] font-[400]  leading-[18px] text-[#393D42] ">28 May, 2023 04:10</p>
-                                                            <div className="w-5 h-5 relative" onClick={() => { if (opt == item) { setOpt(-1) } else { setOpt(item) } }} >
-                                                                <img className="rotate-90" src={threeDot} alt="threeDot" />
-                                                                {opt == item && <div className="z-[20] absolute -top-[50%] right-[120%]" onClick={(e) => e.stopPropagation()}>
-                                                                    <OptionsPopup />
-                                                                </div>
-                                                                }
+                                <div className="flex flex-col w-full gap-3">
+                                    <div className="w-full max-w-[100%] overflow-auto flex flex-col gap-3">
+                                        <div className="grid grid-cols-5 gap-2.5 min-w-[694px] overflow-auto grid-rows-1 py-3 border-y border-[#BABDC1]">
+                                            <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Transaction</p>
+                                            <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Amount</p>
+                                            <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Fundraising</p>
+                                            <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Status</p>
+                                            <p className="font-inter text-[14px] font-[600]  leading-5 text-[#969696] ">Date</p>
+                                        </div>
+                                        <div className="min-w-[694px] flex flex-col gap-1">
+                                            {
+                                                [1, 2, 3, 4, 5, 6].map((item) => {
+                                                    return (
+                                                        <div key={item} className="grid gap-2.5 grid-cols-5 grid-rows-1 h-[36px] items-center pb-1.5 border-b border-[#040608]">
+                                                            <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">Noel StudNoel Studerer</p>
+                                                            <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">$242</p>
+                                                            <p className="font-roboto text-[12px] font-[400]  leading-[18px] text-[#393D42] ">Name 1</p>
+                                                            <div className="">
+                                                                <p className="font-roboto w-fit text-[12px] font-[500]  leading-[18px] text-[#fff] py-0.5 px-1.5 rounded-3xl bg-[#10A363] ">Received</p>
                                                             </div>
+                                                            <div className="flex items-center justify-between">
+                                                                <p className="font-roboto max-w-[77.25px] text-[12px] font-[400]  leading-[18px] text-[#393D42] ">28 May, 2023 04:10</p>
+                                                                <div className="w-5 h-5 relative" onClick={() => { if (opt == item) { setOpt(-1) } else { setOpt(item) } }} >
+                                                                    <img className="rotate-90" src={threeDot} alt="threeDot" />
+                                                                    {opt == item && <div className="z-[20] absolute -top-[50%] right-[120%]" onClick={(e) => e.stopPropagation()}>
+                                                                        <OptionsPopup />
+                                                                    </div>
+                                                                    }
+                                                                </div>
+                                                            </div>
+
                                                         </div>
+                                                    )
+                                                })
+                                            }
 
-                                                    </div>
-                                                )
-                                            })
-                                        }
-
+                                        </div>
                                     </div>
-                                    <div className="flex items-center justify-between">
-                                        <p className="leading-5 font-inter text-[12px] text-center text-[#686F78]">6 of 45 Results</p>
+
+                                    <div className="flex items-center justify-between pr-3 overflow-x-auto">
+                                        <p className="leading-5 sm:block hidden font-inter text-[12px] text-center text-[#686F78]">6 of 45 Results</p>
                                         <div className="h-10 flex gap-2 p-2 items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                                 <path d="M12 14L8 10L12 6" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

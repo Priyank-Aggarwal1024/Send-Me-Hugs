@@ -22,7 +22,7 @@ function CreateNewPopup({ createPopup, setCreatePopup }) {
     const [selectedFile, setSelectedFile] = useState(null);
     console.log(errors)
     return (
-        <div className="create-new overflow-hidden popup-animation max-h-[90%] max-w-[621px] w-[90%] flex flex-col gap-6 xl:p-8 md:p-6 p-4 bg-white">
+        <div className="create-new relative overflow-hidden popup-animation max-h-[90%] max-w-[621px] w-[90%] flex flex-col gap-6 xl:p-8 md:p-6 p-4 bg-white">
             <div className="pb-5 flex justify-between w-full border-b border-b-[#D9D9D9] ">
                 <h2 className="text-[#112230] font-inter text-[20px] leading-7 font-bold opacity-[0.87]">Create new</h2>
                 <div className="w-6 h-6 relative" onClick={() => setCreatePopup(!createPopup)}>
@@ -57,7 +57,7 @@ function CreateNewPopup({ createPopup, setCreatePopup }) {
                     </SwiperSlide>
                 </Swiper>
             </form>
-
+            <div className="create-new-shadow sm:hidden"></div>
         </div>
     );
 }
