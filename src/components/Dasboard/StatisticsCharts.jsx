@@ -24,7 +24,7 @@ function StatisticsCharts(props) {
         colors: ['#FF9E00']
     }
     return (
-        <div>
+        <div className="aspect-square">
             <ReactApexChart
                 options={chartOptions}
                 series={chartOptions.series}

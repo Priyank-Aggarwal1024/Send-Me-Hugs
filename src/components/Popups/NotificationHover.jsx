@@ -9,7 +9,7 @@ function NotificationHover({ notificationData }) {
     return (
         <>
 
-            <div className="max-w-[436px] w-full max-h-[471px] overflow-hidden pt-[15px] pb-5 bg-white rounded shadow flex-col justify-start items-start gap-3.5 inline-flex relative">
+            <div className="sm:w-[436px] w-full max-w-[100vw] max-h-[471px] overflow-hidden pt-[15px] pb-5 bg-white rounded shadow flex-col justify-start items-start gap-3.5 inline-flex relative">
 
                 <div className="h-[46px] flex-col justify-start items-center gap-3.5 flex">
                     <div className="max-w-[396px] justify-between items-center w-full inline-flex">

@@ -17,13 +17,13 @@ function AccountDeletePopup({ deleteAccount, setDeleteAccount }) {
                     <div className="self-stretch text-center text-[#6d6d6d] text-sm font-normal font-roboto leading-tight">All your data according to this account will be deleted</div>
                 </div>
                 <div className="self-stretch min-h-[70px] py-[17px] flex-col justify-start items-center gap-11 flex">
-                    <div className="self-stretch flex-wrap justify-center items-start gap-3 inline-flex">
-                        <div className="px-2 py-1.5 cursor-pointer rounded-[36px] border-2 border-[#ff4f49] justify-center items-center gap-1 flex">
+                    <div className="self-stretch sm:flex-row flex-col justify-center items-start gap-3 inline-flex">
+                        <div className="px-2 py-1.5 w-full sm:w-[138px] cursor-pointer rounded-[36px] border-2 border-[#ff4f49] justify-center items-center gap-1 flex">
                             <div className="px-1 justify-start items-start gap-2.5 flex">
                                 <div className="text-center text-[#ff4f49] text-sm font-medium font-['Poppins'] leading-normal">Delete Account</div>
                             </div>
                         </div>
-                        <div className="h-9 px-2 py-1.5 w-[138px] cursor-pointer bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex" onClick={() => setDeleteAccount(!deleteAccount)}>
+                        <div className="h-9 px-2 py-1.5 w-full sm:w-[138px] cursor-pointer bg-gradient-to-b from-[#2dd6b4] to-[#21806f] rounded-[36px] justify-center items-center gap-1 flex" onClick={() => setDeleteAccount(!deleteAccount)}>
                             <div className="px-1 justify-start items-start gap-2.5 flex">
                                 <div className="text-center text-white text-sm font-medium font-['Poppins'] leading-normal">Cancel</div>
                             </div>

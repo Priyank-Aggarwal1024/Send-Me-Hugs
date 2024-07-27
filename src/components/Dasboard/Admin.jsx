@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import SideNav from './SideNav';
 import { Outlet } from 'react-router-dom';
 
-function Admin({ navOpen, setNavOpen }) {
+function Admin(props) {
     const notificationData = [
         {
             title: "Notification title",
@@ -26,8 +26,8 @@ function Admin({ navOpen, setNavOpen }) {
         },
     ]
     return (
-        <div className="h-[100vh] flex bg-[#f2f2f2]">
-            <SideNav navOpen={navOpen} setNavOpen={setNavOpen} />
+        <div className="min-h-[100vh] h-fit flex bg-[#f2f2f2]">
+            <SideNav />
             <Outlet context={notificationData} />
         </div>
     );

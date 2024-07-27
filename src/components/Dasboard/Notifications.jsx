@@ -3,30 +3,26 @@ import { dArrow2, dashAvatar, Notificationbell } from '../../assets';
 import NotificationHover from '../Popups/NotificationHover';
 import { useOutletContext } from 'react-router-dom';
 
-function Notifications({ navOpen, setNavOpen }) {
+function Notifications(props) {
     const [notification, setNotification] = useState(false)
     const notificationData = useOutletContext()
 
     return (
-        <div className="flex h-[100vh]  w-[100%] flex-col" onClick={() => setNotification(false)}>
-            <div className="pl-[19px] w-[100%] h-[68px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex">
-                <div className="text-center text-black text-[18px] md:text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">
-                    <div className="md:hidden" onClick={() => setNavOpen(true)}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M16.7083 9.16667H3.29167C2.85444 9.16667 2.5 9.52111 2.5 9.95833V10.0417C2.5 10.4789 2.85444 10.8333 3.29167 10.8333H16.7083C17.1456 10.8333 17.5 10.4789 17.5 10.0417V9.95833C17.5 9.52111 17.1456 9.16667 16.7083 9.16667Z" fill="black" />
-                            <path d="M16.7083 13.3333H3.29167C2.85444 13.3333 2.5 13.6878 2.5 14.125V14.2083C2.5 14.6456 2.85444 15 3.29167 15H16.7083C17.1456 15 17.5 14.6456 17.5 14.2083V14.125C17.5 13.6878 17.1456 13.3333 16.7083 13.3333Z" fill="black" />
-                            <path d="M16.7083 5H3.29167C2.85444 5 2.5 5.35444 2.5 5.79167V5.875C2.5 6.31223 2.85444 6.66667 3.29167 6.66667H16.7083C17.1456 6.66667 17.5 6.31223 17.5 5.875V5.79167C17.5 5.35444 17.1456 5 16.7083 5Z" fill="black" />
-                        </svg>
-                    </div>
-                    <h2>Notification</h2>
-                </div>
+        <div className="flex h-[100vh] xlg:w-[calc(100vw_-_260px)] w-[calc(100vw_-_60px)] flex-col" onClick={() => setNotification(false)}>
+            <div className="pl-[19px] w-[100%] xlg:h-[68px] h-[56px] pr-8 py-3 bg-white border-b border-[#d0d0d0] justify-between items-center inline-flex gap-4">
+
+                <h2 className="text-center text-black text-[22px] font-semibold font-popins leading-normal flex gap-2 items-center">Notification</h2>
                 <div className="justify-end items-center gap-5 flex">
-                    <div className="hidden justify-start items-center gap-[25px] md:flex">
-                        <div className="w-[375px] h-11 px-3 py-2.5 bg-white rounded border border-[#babdc1] justify-start items-center gap-3 flex">
+                    <div className="justify-start xlg:flex items-center gap-[25px] hidden">
+                        <div className="xl:w-[375px] w-[100%] h-11 px-3 py-2.5 bg-white rounded border border-[#babdc1] justify-start items-center gap-3 flex">
                             <div className="grow shrink basis-0 h-5 justify-start items-center gap-2 flex">
-                                <div className="w-5 h-5 relative" />
-                                <div className="justify-start items-center gap-0.5 flex">
-                                    <div className="text-[#868c93] text-sm font-normal font-roboto leading-tight">Search</div>
+                                <div className="w-5 h-5 relative" >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                        <path d="M14.1523 13.0917L13.622 12.5613L12.5614 13.622L13.0917 14.1523L14.1523 13.0917ZM16.4697 17.5303C16.7626 17.8232 17.2375 17.8232 17.5304 17.5303C17.8232 17.2374 17.8232 16.7626 17.5304 16.4697L16.4697 17.5303ZM14.6944 9.22222C14.6944 12.2444 12.2444 14.6944 9.22222 14.6944V16.1944C13.0729 16.1944 16.1944 13.0729 16.1944 9.22222H14.6944ZM9.22222 14.6944C6.2 14.6944 3.75 12.2444 3.75 9.22222H2.25C2.25 13.0729 5.37157 16.1944 9.22222 16.1944V14.6944ZM3.75 9.22222C3.75 6.2 6.2 3.75 9.22222 3.75V2.25C5.37157 2.25 2.25 5.37157 2.25 9.22222H3.75ZM9.22222 3.75C12.2444 3.75 14.6944 6.2 14.6944 9.22222H16.1944C16.1944 5.37157 13.0729 2.25 9.22222 2.25V3.75ZM13.0917 14.1523L16.4697 17.5303L17.5304 16.4697L14.1523 13.0917L13.0917 14.1523Z" fill="#868C93" />
+                                    </svg>
+                                </div>
+                                <div className="justify-start w-fit items-center gap-0.5 flex">
+                                    <input type="text" className="text-[#868c93] w-[100%] border-none outline-none text-sm placeholder:text-sm placeholder:px-1 font-normal font-roboto leading-tight" name="query" id="query" placeholder="Search" />
                                 </div>
                             </div>
                         </div>
@@ -69,7 +65,7 @@ function Notifications({ navOpen, setNavOpen }) {
                     </div>
                 </div>
             </div>
-            <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex p-4">
+            <div className="justify-start overflow-auto  w-[100%] items-start gap-1 inline-flex xlg:p-4 md:p-3 p-2.5">
                 <div className=" w-[100%] flex-col justify-start items-start gap-5 inline-flex">
 
                     <div className="grid grid-cols-3 gap-5 w-[100%]">

@@ -1,7 +1,7 @@
 import React from 'react';
 import BackButton from './BackButton';
 import ContinueButton from './ContinueButton';
-import { FormLogo } from '../../assets';
+import { attach_file, FormLogo, trash2 } from '../../assets';
 import { useNavigate } from 'react-router-dom';
 
 function Step5({ swiper, register, setValue }) {
@@ -26,6 +26,29 @@ function Step5({ swiper, register, setValue }) {
                     <div className="w-[100%] min-h-[64px] step-form-div flex justify-between flex-col relative">
                         <label htmlFor="story" className="w-[100%] font-roboto text-[14px] font-[500] leading-5 text-[#686F78]">Tell your story</label>
                         <textarea type="text" {...register("story", { required: "Field is Required" })} id="story" className="border-none outline-none font-roboto text-[14px] font-[400] leading-5 text-[#393D42] h-auto placeholder:text-[#868C93]" placeholder="Hi, my name is John and I’m fundraising for" />
+                    </div>
+                    <div className="flex certificates w-full flex-col bg-white gap-5">
+                        <div className="self-stretch flex-col justify-start items-start gap-5 flex">
+                            <div className="self-stretch justify-between items-end inline-flex">
+                                <div className="max-w-[415px] flex-col justify-start items-start gap-[13px] inline-flex">
+                                    <div className="max-w-[211px]"><span className="text-black text-xl font-semibold font-['Inter'] leading-tight">Certificates</span><span className="text-black text-sm font-normal font-['Inter'] leading-[14.14px]"> (NGO’s)</span></div>
+                                    <div className="max-w-[415px] text-[#676767] text-sm font-normal font-['Poppins'] leading-normal">Upload certificates which help donators to understand your needs...</div>
+                                </div>
+                            </div>
+                            <div className="justify-start items-start gap-5 flex flex-wrap">
+                                <div className="md:w-[124px] md:h-[124px] w-[112px] h-[112px] flex justify-center items-center bg-[#efefef] rounded">
+                                    <img src={trash2} alt="Trash 2" />
+                                </div>
+                                <div className="md:w-[124px] md:h-[124px] w-[112px] h-[112px] bg-[#efefef] rounded" />
+                                <div className="md:w-[124px] md:h-[124px] w-[112px] h-[112px] bg-[#efefef] rounded" />
+                                <div className="md:w-[124px] md:h-[124px] w-[112px] h-[112px] rounded border-dashed border border-[#818181] flex-col justify-center items-center gap-2 inline-flex">
+                                    <div className="w-6 h-6 relative">
+                                        <img src={attach_file} alt="Attach File" />
+                                    </div>
+                                    <div className="text-center text-[#676767] text-xs font-normal font-['Poppins'] leading-normal">Attach File</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

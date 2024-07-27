@@ -27,7 +27,7 @@ function Step1({ swiper, register, watch }) {
                 </div>
                 <div className="create-popup-content pt-[115px] flex flex-col gap-[43px] ">
                     <div className="flex flex-col gap-[21px]">
-                        <h2 className="text-black font-bold text-[21px] font-inter leading-[65.5%]">Where will the funds go?</h2>
+                        <h2 className="text-black font-bold text-[21px] font-inter">Where will the funds go?</h2>
                         <p className="text-[14px] leading-5 font-inter">Choose the location where you plan to withdraw your funds.</p>
                     </div>
                     <div className="flex flex-col gap-3">
